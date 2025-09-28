@@ -1,42 +1,509 @@
-<html>
-	<head>
-		<style type="text/css">
-			.parrafo {
-				background-color:blue;
-				color: white;
-				width: 250px;
-			}
-		</style>
-	</head>
-	<body>
-		<p class="parrafo">
-			<b>Listado de usuarios:</b>
-		</p>
-		<table border="1">
-			<thead>
-				<tr>
-					<th>Nombre</th>
-					<th>Dirección</th>
-					<th>Correo</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Santos Andres Yanes</td>
-					<td>La Merced 123</td>
-					<td>santosandres@mail.com</td>
-				</tr>
-				<tr>
-					<td>Dayra Geraldina Lopez</td>
-					<td>Amazonas 115</td>
-					<td>Dayrageraldina@mail.com</td>
-				</tr>
-				<tr>
-					<td>Cristhian AndresYanes</td>
-					<td>Ambato 342</td>
-					<td>cristhianyanes@mail.com</td>
-				</tr>
-			</tbody>
-		</table>
-	</body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LimpiezaPro - Servicios de Limpieza para Casas y Oficinas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f0f0f0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23e8f4f8" width="1200" height="600"/><circle fill="%23667eea" cx="200" cy="150" r="50" opacity="0.3"/><circle fill="%23764ba2" cx="800" cy="300" r="80" opacity="0.2"/><circle fill="%23667eea" cx="1000" cy="100" r="60" opacity="0.25"/></svg>');
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background-size: cover;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        /* Services */
+        .services {
+            background: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        /* About */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            list-style: none;
+        }
+
+        .about-features li {
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .about-features li::before {
+            content: "✓";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #f8f9fa;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item i {
+            margin-right: 15px;
+            color: #667eea;
+            width: 20px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #5a6fd8;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🧽 LimpiezaPro</div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Servicios de Limpieza Profesional</h1>
+            <p>Mantenemos tu hogar y oficina impecables con la mejor calidad y confianza</p>
+            <a href="#contacto" class="cta-button">Solicita tu Cotización</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Limpieza Residencial</h3>
+                <p>Servicio completo de limpieza para tu hogar. Incluye todas las habitaciones, cocina, baños y áreas comunes. Productos ecológicos disponibles.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Limpieza de Oficinas</h3>
+                <p>Mantenimiento profesional de espacios de trabajo. Horarios flexibles, limpieza diaria, semanal o mensual según tus necesidades.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Limpieza Profunda</h3>
+                <p>Servicio especializado para limpieza intensiva. Ideal para mudanzas, eventos especiales o limpieza estacional completa.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🪟</div>
+                <h3>Limpieza de Ventanas</h3>
+                <p>Servicio especializado de limpieza de ventanas interiores y exteriores. Dejamos tus cristales completamente transparentes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛋️</div>
+                <h3>Limpieza de Muebles</h3>
+                <p>Cuidado especializado para sofás, alfombras y tapicería. Utilizamos técnicas profesionales para cada tipo de material.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧹</div>
+                <h3>Servicio de Conserjería</h3>
+                <p>Servicio integral de mantenimiento para edificios y condominios. Limpieza de áreas comunes y espacios exteriores.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <h2>¿Por Qué Elegirnos?</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Con más de 10 años de experiencia en el sector de limpieza, nos especializamos en brindar servicios de alta calidad tanto para hogares como para empresas. Nuestro equipo está capacitado profesionalmente y utiliza los mejores productos y equipos del mercado.</p>
+                <p>Entendemos que cada cliente tiene necesidades únicas, por eso ofrecemos planes personalizados que se adaptan a tu presupuesto y requerimientos específicos.</p>
+            </div>
+            <div>
+                <ul class="about-features">
+                    <li>Personal capacitado y confiable</li>
+                    <li>Productos de limpieza ecológicos</li>
+                    <li>Equipos profesionales de última generación</li>
+                    <li>Seguros de responsabilidad civil</li>
+                    <li>Disponibilidad 7 días a la semana</li>
+                    <li>Presupuestos gratuitos</li>
+                    <li>Satisfacción 100% garantizada</li>
+                    <li>Precios competitivos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <h2>Contáctanos</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <div class="contact-item">
+                    <i>📞</i>
+                    <span>+1 (555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                    <i>📧</i>
+                    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8c1c6cec7e8c4c1c5d8c1cdd2c985d8dac786cbc7c5">[email&#160;protected]</a></span>
+                </div>
+                <div class="contact-item">
+                    <i>📍</i>
+                    <span>Av. Principal 123, Ciudad, País</span>
+                </div>
+                <div class="contact-item">
+                    <i>🕒</i>
+                    <span>Lun - Dom: 7:00 AM - 10:00 PM</span>
+                </div>
+                <div class="contact-item">
+                    <i>💬</i>
+                    <span>WhatsApp: +1 (555) 987-6543</span>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Solicita tu Cotización</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="servicio">Tipo de Servicio</label>
+                        <select id="servicio" name="servicio" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                            <option value="">Selecciona un servicio</option>
+                            <option value="residencial">Limpieza Residencial</option>
+                            <option value="oficinas">Limpieza de Oficinas</option>
+                            <option value="profunda">Limpieza Profunda</option>
+                            <option value="ventanas">Limpieza de Ventanas</option>
+                            <option value="muebles">Limpieza de Muebles</option>
+                            <option value="conserjeria">Servicio de Conserjería</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Describe tus necesidades de limpieza..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Solicitud</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 LimpiezaPro. Todos los derechos reservados. | Servicios de limpieza profesional para casas y oficinas</p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por tu solicitud! Nos pondremos en contacto contigo pronto.');
+            this.reset();
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(102, 126, 234, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            }
+        });
+    </script>
+</body>
 </html>
