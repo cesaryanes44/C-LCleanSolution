@@ -432,38 +432,26 @@
                 </div>
             </div>
             <div class="contact-form">
-                <h3>Solicita tu Cotización</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="nombre">Nombre Completo</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono">
-                    </div>
-                    <div class="form-group">
-                        <label for="servicio">Tipo de Servicio</label>
-                        <select id="servicio" name="servicio" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                            <option value="">Selecciona un servicio</option>
-                            <option value="residencial">Limpieza Residencial</option>
-                            <option value="oficinas">Limpieza de Oficinas</option>
-                            <option value="profunda">Limpieza Profunda</option>
-                            <option value="ventanas">Limpieza de Ventanas</option>
-                            <option value="muebles">Limpieza de Muebles</option>
-                            <option value="conserjeria">Servicio de Conserjería</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" placeholder="Describe tus necesidades de limpieza..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Enviar Solicitud</button>
-                </form>
+               <!-- Reemplazar TU_FORM_ID con el ID real de tu Google Form -->
+                <iframe 
+                    class="google-form-container"
+                    src="https://docs.google.com/forms/d/e/TU_FORM_ID/viewform?embedded=true" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                    Cargando…
+                </iframe>
+                
+                <div class="form-buttons">
+                    <a href="https://docs.google.com/forms/d/e/TU_FORM_ID/viewform" 
+                       target="_blank" 
+                       class="open-form-btn">
+                        📝 Abrir formulario en nueva ventana
+                    </a>
+                    <a href="tel:+15551234567" class="open-form-btn">
+                        📞 Llamar directamente
+                    </a>
+                </div>
             </div>
         </div>
     </section>
