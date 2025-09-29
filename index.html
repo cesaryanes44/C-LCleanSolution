@@ -43,6 +43,12 @@
             font-weight: bold;
         }
 
+        .nav-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
         nav ul {
             display: flex;
             list-style: none;
@@ -60,6 +66,32 @@
 
         nav ul li a:hover {
             color: #f0f0f0;
+        }
+
+        /* Language Toggle Button */
+        .language-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .language-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .flag {
+            font-size: 1.2rem;
         }
 
         /* Hero Section */
@@ -266,6 +298,29 @@
             background: #5a6fd8;
         }
 
+        .form-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .open-form-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            text-align: center;
+        }
+
+        .open-form-btn:hover {
+            background: #5a6fd8;
+        }
+
         /* Footer */
         footer {
             background: #333;
@@ -281,12 +336,19 @@
                 padding: 1rem;
             }
 
-            nav ul {
+            .nav-content {
                 margin-top: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
             }
 
             nav ul li {
-                margin: 0 1rem;
+                margin: 0.5rem 0;
             }
 
             .hero-content h1 {
@@ -326,79 +388,85 @@
     <header>
         <nav>
             <div class="logo">🧽 C & L Solution Cleaning</div>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+            <div class="nav-content">
+                <ul>
+                    <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+                    <li><a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a></li>
+                    <li><a href="#nosotros" data-es="Nosotros" data-en="About Us">Nosotros</a></li>
+                    <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+                </ul>
+                <div class="language-toggle" onclick="toggleLanguage()">
+                    <span class="flag" id="flag">🇪🇸</span>
+                    <span id="lang-text">ES</span>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Servicios de Limpieza Profesional</h1>
-            <p>Mantenemos tu hogar y oficina impecables con la mejor calidad y confianza</p>
-            <a href="#contacto" class="cta-button">Solicita tu Cotización</a>
+            <h1 data-es="Servicios de Limpieza Profesional" data-en="Professional Cleaning Services">Servicios de Limpieza Profesional</h1>
+            <p data-es="Mantenemos tu hogar y oficina impecables con la mejor calidad y confianza" data-en="We keep your home and office spotless with the best quality and trust">Mantenemos tu hogar y oficina impecables con la mejor calidad y confianza</p>
+            <a href="#contacto" class="cta-button" data-es="Solicita tu Cotización" data-en="Request Your Quote">Solicita tu Cotización</a>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="servicios" class="services">
-        <h2>Nuestros Servicios</h2>
+        <h2 data-es="Nuestros Servicios" data-en="Our Services">Nuestros Servicios</h2>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">🏠</div>
-                <h3>Limpieza Residencial</h3>
-                <p>Servicio completo de limpieza para tu hogar. Incluye todas las habitaciones, cocina, baños y áreas comunes. Productos ecológicos disponibles.</p>
+                <h3 data-es="Limpieza Residencial" data-en="Residential Cleaning">Limpieza Residencial</h3>
+                <p data-es="Servicio completo de limpieza para tu hogar. Incluye todas las habitaciones, cocina, baños y áreas comunes. Productos ecológicos disponibles." data-en="Complete cleaning service for your home. Includes all rooms, kitchen, bathrooms and common areas. Eco-friendly products available.">Servicio completo de limpieza para tu hogar. Incluye todas las habitaciones, cocina, baños y áreas comunes. Productos ecológicos disponibles.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🏢</div>
-                <h3>Limpieza de Oficinas</h3>
-                <p>Mantenimiento profesional de espacios de trabajo. Horarios flexibles, limpieza diaria, semanal o mensual según tus necesidades.</p>
+                <h3 data-es="Limpieza de Oficinas" data-en="Office Cleaning">Limpieza de Oficinas</h3>
+                <p data-es="Mantenimiento profesional de espacios de trabajo. Horarios flexibles, limpieza diaria, semanal o mensual según tus necesidades." data-en="Professional maintenance of workspaces. Flexible schedules, daily, weekly or monthly cleaning according to your needs.">Mantenimiento profesional de espacios de trabajo. Horarios flexibles, limpieza diaria, semanal o mensual según tus necesidades.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">✨</div>
-                <h3>Limpieza Profunda</h3>
-                <p>Servicio especializado para limpieza intensiva. Ideal para mudanzas, eventos especiales o limpieza estacional completa.</p>
+                <h3 data-es="Limpieza Profunda" data-en="Deep Cleaning">Limpieza Profunda</h3>
+                <p data-es="Servicio especializado para limpieza intensiva. Ideal para mudanzas, eventos especiales o limpieza estacional completa." data-en="Specialized service for intensive cleaning. Ideal for moves, special events or complete seasonal cleaning.">Servicio especializado para limpieza intensiva. Ideal para mudanzas, eventos especiales o limpieza estacional completa.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🪟</div>
-                <h3>Limpieza de Ventanas</h3>
-                <p>Servicio especializado de limpieza de ventanas interiores y exteriores. Dejamos tus cristales completamente transparentes.</p>
+                <h3 data-es="Limpieza de Ventanas" data-en="Window Cleaning">Limpieza de Ventanas</h3>
+                <p data-es="Servicio especializado de limpieza de ventanas interiores y exteriores. Dejamos tus cristales completamente transparentes." data-en="Specialized interior and exterior window cleaning service. We leave your glass completely transparent.">Servicio especializado de limpieza de ventanas interiores y exteriores. Dejamos tus cristales completamente transparentes.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🛋️</div>
-                <h3>Limpieza de Muebles</h3>
-                <p>Cuidado especializado para sofás, alfombras y tapicería. Utilizamos técnicas profesionales para cada tipo de material.</p>
+                <h3 data-es="Limpieza de Muebles" data-en="Furniture Cleaning">Limpieza de Muebles</h3>
+                <p data-es="Cuidado especializado para sofás, alfombras y tapicería. Utilizamos técnicas profesionales para cada tipo de material." data-en="Specialized care for sofas, carpets and upholstery. We use professional techniques for each type of material.">Cuidado especializado para sofás, alfombras y tapicería. Utilizamos técnicas profesionales para cada tipo de material.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🧹</div>
-                <h3>Servicio de Conserjería</h3>
-                <p>Servicio integral de mantenimiento para edificios y condominios. Limpieza de áreas comunes y espacios exteriores.</p>
+                <h3 data-es="Servicio de Conserjería" data-en="Concierge Service">Servicio de Conserjería</h3>
+                <p data-es="Servicio integral de mantenimiento para edificios y condominios. Limpieza de áreas comunes y espacios exteriores." data-en="Comprehensive maintenance service for buildings and condominiums. Cleaning of common areas and outdoor spaces.">Servicio integral de mantenimiento para edificios y condominios. Limpieza de áreas comunes y espacios exteriores.</p>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="nosotros" class="about">
-        <h2>¿Por Qué Elegirnos?</h2>
+        <h2 data-es="¿Por Qué Elegirnos?" data-en="Why Choose Us?">¿Por Qué Elegirnos?</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Con experiencia en el sector de limpieza, nos especializamos en brindar servicios de alta calidad tanto para hogares como para empresas. Nuestro equipo está capacitado profesionalmente y utiliza los mejores productos y equipos del mercado.</p>
-                <p>Entendemos que cada cliente tiene necesidades únicas, por eso ofrecemos planes personalizados que se adaptan a tu presupuesto y requerimientos específicos.</p>
+                <p data-es="Con experiencia en el sector de limpieza, nos especializamos en brindar servicios de alta calidad tanto para hogares como para empresas. Nuestro equipo está capacitado profesionalmente y utiliza los mejores productos y equipos del mercado." data-en="With experience in the cleaning sector, we specialize in providing high-quality services for both homes and businesses. Our team is professionally trained and uses the best products and equipment on the market.">Con experiencia en el sector de limpieza, nos especializamos en brindar servicios de alta calidad tanto para hogares como para empresas. Nuestro equipo está capacitado profesionalmente y utiliza los mejores productos y equipos del mercado.</p>
+                <p data-es="Entendemos que cada cliente tiene necesidades únicas, por eso ofrecemos planes personalizados que se adaptan a tu presupuesto y requerimientos específicos." data-en="We understand that each client has unique needs, which is why we offer personalized plans that adapt to your budget and specific requirements.">Entendemos que cada cliente tiene necesidades únicas, por eso ofrecemos planes personalizados que se adaptan a tu presupuesto y requerimientos específicos.</p>
             </div>
             <div>
                 <ul class="about-features">
-                    <li>Personal capacitado y confiable</li>
-                    <li>Productos de limpieza ecológicos</li>
-                    <li>Equipos profesionales de última generación</li>
-                    <li>Seguros de responsabilidad civil</li>
-                    <li>Disponibilidad 7 días a la semana</li>
-                    <li>Presupuestos gratuitos</li>
-                    <li>Satisfacción 100% garantizada</li>
-                    <li>Precios competitivos</li>
+                    <li data-es="Personal capacitado y confiable" data-en="Trained and reliable staff">Personal capacitado y confiable</li>
+                    <li data-es="Productos de limpieza ecológicos" data-en="Eco-friendly cleaning products">Productos de limpieza ecológicos</li>
+                    <li data-es="Equipos profesionales de última generación" data-en="State-of-the-art professional equipment">Equipos profesionales de última generación</li>
+                    <li data-es="Seguros de responsabilidad civil" data-en="Liability insurance">Seguros de responsabilidad civil</li>
+                    <li data-es="Disponibilidad 7 días a la semana" data-en="7 days a week availability">Disponibilidad 7 días a la semana</li>
+                    <li data-es="Presupuestos gratuitos" data-en="Free estimates">Presupuestos gratuitos</li>
+                    <li data-es="Satisfacción 100% garantizada" data-en="100% satisfaction guaranteed">Satisfacción 100% garantizada</li>
+                    <li data-es="Precios competitivos" data-en="Competitive prices">Precios competitivos</li>
                 </ul>
             </div>
         </div>
@@ -406,25 +474,25 @@
 
     <!-- Contact Section -->
     <section id="contacto" class="contact">
-        <h2>Contáctanos</h2>
+        <h2 data-es="Contáctanos" data-en="Contact Us">Contáctanos</h2>
         <div class="contact-grid">
             <div class="contact-info">
-                <h3>Información de Contacto</h3>
+                <h3 data-es="Información de Contacto" data-en="Contact Information">Información de Contacto</h3>
                 <div class="contact-item">
                     <i>📞</i>
                     <span>+1 (364) 4928899</span>
                 </div>
                 <div class="contact-item">
                     <i>📧</i>
-                    <span><a href="mailto:clcleaningsolution@gmail.com" style="color: inherit; text-decoration: none;">clcleaningsolution@gmail.com</a></span>
+                    <span><a href="/cdn-cgi/l/email-protection#d5b6b9b6b9b0b4bbbcbbb2a6bab9a0a1bcbabb95b2b8b4bcb9fbb6bab8" style="color: inherit; text-decoration: none;"><span class="__cf_email__" data-cfemail="96f5faf5faf3f7f8fff8f1e5f9fae3e2fff9f8d6f1fbf7fffab8f5f9fb">[email&#160;protected]</span></a></span>
                 </div>
                 <div class="contact-item">
                     <i>📍</i>
-                    <span>Texas, Houston, EEUU</span>
+                    <span data-es="Texas, Houston, EEUU" data-en="Texas, Houston, USA">Texas, Houston, EEUU</span>
                 </div>
                 <div class="contact-item">
                     <i>🕒</i>
-                    <span>Lun - Dom: 7:00 AM - 10:00 PM</span>
+                    <span data-es="Lun - Dom: 7:00 AM - 10:00 PM" data-en="Mon - Sun: 7:00 AM - 10:00 PM">Lun - Dom: 7:00 AM - 10:00 PM</span>
                 </div>
                 <div class="contact-item">
                     <i>💬</i>
@@ -432,16 +500,19 @@
                 </div>
             </div>
             <div class="contact-form">
-               <!-- Reemplazar TU_FORM_ID con el ID real de tu Google Form -->
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSch5kTxgPvBqeNozVA8OBCwgaP9W5Uzpa-sKPLLKGr1fpqxyA/viewform?embedded=true" width="640" height="1077" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSch5kTxgPvBqeNozVA8OBCwgaP9W5Uzpa-sKPLLKGr1fpqxyA/viewform?embedded=true" width="640" height="1077" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
                 
                 <div class="form-buttons">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSch5kTxgPvBqeNozVA8OBCwgaP9W5Uzpa-sKPLLKGr1fpqxyA/viewform" 
                        target="_blank" 
-                       class="open-form-btn">
+                       class="open-form-btn"
+                       data-es="📝 Abrir formulario en nueva ventana"
+                       data-en="📝 Open form in new window">
                         📝 Abrir formulario en nueva ventana
                     </a>
-                    <a href="tel:+13464928899" class="open-form-btn">
+                    <a href="tel:+13464928899" class="open-form-btn"
+                       data-es="📞 Llamar directamente"
+                       data-en="📞 Call directly">
                         📞 Llamar directamente
                     </a>
                 </div>
@@ -451,10 +522,50 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 C&LSolutionCleaning. Todos los derechos reservados. | Servicios de limpieza profesional para casas y oficinas</p>
+        <p data-es="&copy; 2025 C&LSolutionCleaning. Todos los derechos reservados. | Servicios de limpieza profesional para casas y oficinas" data-en="&copy; 2025 C&LSolutionCleaning. All rights reserved. | Professional cleaning services for homes and offices">&copy; 2025 C&LSolutionCleaning. Todos los derechos reservados. | Servicios de limpieza profesional para casas y oficinas</p>
     </footer>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        let currentLang = 'es';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            
+            // Update flag and language text
+            const flag = document.getElementById('flag');
+            const langText = document.getElementById('lang-text');
+            
+            if (currentLang === 'es') {
+                flag.textContent = '🇪🇸';
+                langText.textContent = 'ES';
+                document.documentElement.lang = 'es';
+            } else {
+                flag.textContent = '🇺🇸';
+                langText.textContent = 'EN';
+                document.documentElement.lang = 'en';
+            }
+            
+            // Update all text elements
+            const elements = document.querySelectorAll('[data-es][data-en]');
+            elements.forEach(element => {
+                const text = element.getAttribute('data-' + currentLang);
+                if (element.tagName.toLowerCase() === 'a' && element.href) {
+                    element.textContent = text;
+                } else if (element.innerHTML.includes('&copy;')) {
+                    element.innerHTML = text;
+                } else {
+                    element.textContent = text;
+                }
+            });
+
+            // Update page title
+            if (currentLang === 'es') {
+                document.title = 'C&L Solution Cleaning - Servicios de Limpieza para Casas y Oficinas';
+            } else {
+                document.title = 'C&L Solution Cleaning - Professional Cleaning Services for Homes and Offices';
+            }
+        }
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -470,11 +581,18 @@
         });
 
         // Form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Gracias por tu solicitud! Nos pondremos en contacto contigo pronto.');
-            this.reset();
-        });
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (currentLang === 'es') {
+                    alert('¡Gracias por tu solicitud! Nos pondremos en contacto contigo pronto.');
+                } else {
+                    alert('Thank you for your request! We will contact you soon.');
+                }
+                this.reset();
+            });
+        }
 
         // Add scroll effect to header
         window.addEventListener('scroll', function() {
