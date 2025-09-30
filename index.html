@@ -106,25 +106,24 @@
 
         /* Hero Section with Cleaning Person */
         .hero {
-            /* Combined background: image with gradient overlay */
-            background: 
-                linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%),
-                url("img/hero-cleaning.jpg") no-repeat center center;
-            background-size: cover;
-            background-attachment: scroll; /* Better for mobile devices */
-            background-color: #667eea; /* Fallback color if image doesn't load */
-            height: 100vh;
-            min-height: 500px; /* Ensure minimum height on mobile */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            min-width: 100%;
-        }
+  background-image: url("img/hero-cleaning.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* background-attachment: scroll; mejor no usar "fixed" para móviles */
+  
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  color: white;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-width: 100%;
+}
 
         /* Cleaning person illustration */
         .hero::before {
