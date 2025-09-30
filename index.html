@@ -446,29 +446,29 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                padding: 0.5rem 1rem;
-                min-height: auto;
-            }
+    nav {
+        flex-direction: column; /* Logo arriba, contenido debajo */
+        align-items: center;
+    }
 
-            .nav-content {
-                margin-top: 0.5rem;
-                flex-direction: column;
-                gap: 0.5rem;
-            }
+    .nav-content {
+        flex-direction: row; /* Menú y botón idioma en la misma línea */
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+    }
 
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-            }
+    nav ul {
+        flex-direction: row; /* menú horizontal */
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+    }
 
-            nav ul li {
-                margin: 0.2rem 0;
-                padding: 0;
-            }
+    nav ul li {
+        margin: 0;
+    }
 
             nav ul li a {
                 padding: 0.3rem 0.5rem;
