@@ -106,27 +106,19 @@
 
         /* Hero Section with Cleaning Person */
         .hero {
-  background-color: #333; /* respaldo por si no carga la imagen */
-  background-image: url("img/hero-cleaning.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("img/hero-cleaning.jpg") no-repeat center center/cover;
+  background-attachment: scroll; /* 👈 forzado a scroll */
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-}
-
-}
-
-.hero::before,
-.hero::after {
-  content: none;
-}
-
-       
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-width: 100%;
+}      
         /* Cleaning bubbles */
         .cleaning-bubbles {
             position: absolute;
