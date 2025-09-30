@@ -49,13 +49,18 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
+              font-size: 1rem; /* ajusta según convenga */
+              white-space: nowrap; /* evita que se rompa en varias líneas */
+              display: flex;
+              align-items: center;
+              gap: 8px; /* espacio entre logo y texto */
+}
 
         .logo img {
-            max-height: 40px; /* más pequeño en móviles */
-        }
+                   max-height: 40px; /* más pequeño en móviles */
+                   height: auto;
+                   width: auto;
+}
 
         .nav-content {
             display: flex;
