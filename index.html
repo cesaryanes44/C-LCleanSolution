@@ -106,8 +106,8 @@
 
         /* Hero Section with Cleaning Person */
         .hero {
-  background: url("img/hero-cleaning.png") no-repeat center center/cover;
-  background-attachment: scroll; /* 👈 forzado a scroll */
+  background: url("img/hero-cleaning.jpg") no-repeat center center/cover;
+  background-attachment: scroll; /* default */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -118,7 +118,20 @@
   overflow: hidden;
   width: 100%;
   min-width: 100%;
-}      
+  background-color: #333; /* respaldo por si la imagen no carga */
+}
+
+/* Fix específico para móviles */
+@media (max-width: 768px) {
+  .hero {
+    background-image: url("img/hero-cleaning.jpg") !important;
+    background-attachment: scroll !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}
+     
         /* Cleaning bubbles */
         .cleaning-bubbles {
             position: absolute;
