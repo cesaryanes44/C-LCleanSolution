@@ -106,17 +106,28 @@
 
         /* Hero Section with Cleaning Person */
         .hero {
-    background: url("img/hero-cleaning.png") no-repeat center center/cover;
+  background-image: url("img/hero-cleaning.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* background-attachment: scroll; mejor no usar "fixed" para móviles */
+  
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  
   color: white;
   position: relative;
   overflow: hidden;
   width: 100%;
   min-width: 100%;
+}
+
+.hero::before,
+.hero::after {
+  content: none;
 }
   /* background-attachment: scroll; mejor no usar "fixed" para móviles */
   
