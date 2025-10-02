@@ -7,6 +7,31 @@
     <!-- Preload hero image for faster loading on mobile -->
     <link rel="preload" href="img/hero-cleaning.jpg" as="image" media="(max-width: 768px)">
     <style>
+
+        /* Halloween Bats */
+.bat {
+  position: fixed;
+  top: -50px;
+  font-size: 2rem;
+  color: black;
+  animation: fly 10s linear infinite;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+
+
+/* Halloween Pumpkin */
+.halloween-pumpkin {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 3000;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
         * {
             margin: 0;
             padding: 0;
@@ -627,6 +652,19 @@
                 transform: translateY(-20px) rotate(180deg);
                 opacity: 0.8;
             }
+            
+        @keyframes glow {
+          from { text-shadow: 0 0 5px #ff6b00; }
+            to { text-shadow: 0 0 20px #ff6b00; }
+}  
+        @keyframes fly {
+          0% { transform: translateX(-10vw) translateY(0) rotate(0deg); opacity: 0; }
+          10% { opacity: 1; }
+          50% { transform: translateX(50vw) translateY(50vh) rotate(180deg); }
+          90% { opacity: 1; }
+          100% { transform: translateX(110vw) translateY(-20vh) rotate(360deg); opacity: 0; }
+}
+            
         }
 
         /* Smooth scroll */
@@ -889,6 +927,28 @@
             } else {
                 header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
             }
+            
+            <!-- Calabaza fija -->
+<div class="halloween-pumpkin">🎃</div>
+
+<script>
+// Crear murciélagos voladores
+function createBat() {
+  const bat = document.createElement("div");
+  bat.classList.add("bat");
+  bat.textContent = "🦇";
+  bat.style.left = Math.random() * window.innerWidth + "px";
+  document.body.appendChild(bat);
+
+  setTimeout(() => {
+    bat.remove();
+  }, 10000); // se elimina después de volar
+}
+
+// Crear murciélagos cada 4 segundos
+setInterval(createBat, 4000);
+</script>
+
         });
     </script>
 </body>
