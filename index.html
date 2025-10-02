@@ -54,13 +54,13 @@
               display: flex;
               align-items: center;
               gap: 8px; /* espacio entre logo y texto */
-}
+        }
 
         .logo img {
                    max-height: 40px; /* más pequeño en móviles */
                    height: auto;
                    width: auto;
-}
+        }
 
         .nav-content {
             display: flex;
@@ -115,31 +115,31 @@
 
         /* Hero Section with Cleaning Person */
         .hero {
-  background: url("img/hero-cleaning.png") no-repeat center center/cover;
-  background-attachment: scroll; /* default */
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  min-width: 100%;
-  background-color: #333; /* respaldo por si la imagen no carga */
-}
+          background: url("img/hero-cleaning.png") no-repeat center center/cover;
+          background-attachment: scroll; /* default */
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: white;
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          min-width: 100%;
+          background-color: #333; /* respaldo por si la imagen no carga */
+        }
 
-/* Fix específico para móviles */
-@media (max-width: 768px) {
-  .hero {
-    background-image: url("img/hero-cleaning.png") !important;
-    background-attachment: scroll !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-    background-size: cover !important;
-  }
-}
+        /* Fix específico para móviles */
+        @media (max-width: 768px) {
+          .hero {
+            background-image: url("img/hero-cleaning.png") !important;
+            background-attachment: scroll !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+            background-size: cover !important;
+          }
+        }
      
         /* Cleaning bubbles */
         .cleaning-bubbles {
@@ -656,6 +656,321 @@
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
+
+        /* ===== DECORACIONES DE HALLOWEEN 🎃👻🦇 ===== */
+
+        /* Overlay de Halloween para toda la página */
+        .halloween-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 1000;
+          overflow: hidden;
+        }
+
+        /* Murciélagos voladores */
+        .bat {
+          position: fixed;
+          top: -50px;
+          font-size: 2rem;
+          color: #000;
+          animation: fly 12s linear infinite;
+          z-index: 9999;
+          pointer-events: none;
+          filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+        }
+
+        @keyframes fly {
+          0% { 
+            transform: translateX(-10vw) translateY(0) rotate(0deg); 
+            opacity: 0; 
+          }
+          10% { opacity: 1; }
+          25% { 
+            transform: translateX(25vw) translateY(20vh) rotate(90deg); 
+          }
+          50% { 
+            transform: translateX(50vw) translateY(50vh) rotate(180deg); 
+          }
+          75% { 
+            transform: translateX(75vw) translateY(30vh) rotate(270deg); 
+          }
+          90% { opacity: 1; }
+          100% { 
+            transform: translateX(110vw) translateY(-20vh) rotate(360deg); 
+            opacity: 0; 
+          }
+        }
+
+        /* Fantasmas flotantes */
+        .ghost {
+          position: fixed;
+          font-size: 2.5rem;
+          color: rgba(255, 255, 255, 0.8);
+          animation: floatGhost 8s ease-in-out infinite;
+          z-index: 1001;
+          pointer-events: none;
+          filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+        }
+
+        @keyframes floatGhost {
+          0%, 100% { 
+            transform: translateY(0) rotate(-5deg);
+            opacity: 0.6;
+          }
+          25% { 
+            transform: translateY(-20px) rotate(5deg);
+            opacity: 1;
+          }
+          50% { 
+            transform: translateY(-10px) rotate(-3deg);
+            opacity: 0.8;
+          }
+          75% { 
+            transform: translateY(-30px) rotate(3deg);
+            opacity: 1;
+          }
+        }
+
+        /* Hojas de otoño cayendo */
+        .leaf {
+          position: fixed;
+          top: -50px;
+          font-size: 1.5rem;
+          animation: fallLeaf 15s linear infinite;
+          z-index: 999;
+          pointer-events: none;
+        }
+
+        @keyframes fallLeaf {
+          0% { 
+            transform: translateY(-50px) rotate(0deg);
+            opacity: 1;
+          }
+          50% { 
+            transform: translateY(50vh) rotate(180deg);
+            opacity: 0.7;
+          }
+          100% { 
+            transform: translateY(100vh) rotate(360deg);
+            opacity: 0;
+          }
+        }
+
+        /* Telarañas en las esquinas */
+        .spider-web {
+          position: fixed;
+          font-size: 4rem;
+          color: rgba(100, 100, 100, 0.3);
+          z-index: 998;
+          pointer-events: none;
+          animation: webGlow 3s ease-in-out infinite alternate;
+        }
+
+        .spider-web.top-left {
+          top: 10px;
+          left: 10px;
+          transform: rotate(0deg);
+        }
+
+        .spider-web.top-right {
+          top: 10px;
+          right: 10px;
+          transform: rotate(90deg);
+        }
+
+        .spider-web.bottom-left {
+          bottom: 10px;
+          left: 10px;
+          transform: rotate(-90deg);
+        }
+
+        @keyframes webGlow {
+          from { text-shadow: 0 0 5px rgba(100,100,100,0.3); }
+          to { text-shadow: 0 0 15px rgba(100,100,100,0.6); }
+        }
+
+        /* Calabaza principal */
+        .halloween-pumpkin {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          font-size: 3.5rem;
+          cursor: pointer;
+          z-index: 9999;
+          animation: pumpkinGlow 2s ease-in-out infinite alternate;
+          transition: transform 0.3s ease;
+        }
+
+        .halloween-pumpkin:hover {
+          transform: scale(1.2) rotate(10deg);
+        }
+
+        @keyframes pumpkinGlow {
+          from { 
+            text-shadow: 0 0 5px #ff6b00, 0 0 10px #ff6b00; 
+            filter: brightness(1);
+          }
+          to { 
+            text-shadow: 0 0 20px #ff6b00, 0 0 30px #ff6b00, 0 0 40px #ff4500; 
+            filter: brightness(1.3);
+          }
+        }
+
+        /* Pequeñas calabazas decorativas */
+        .mini-pumpkin {
+          position: fixed;
+          font-size: 1.5rem;
+          z-index: 997;
+          pointer-events: none;
+          animation: miniGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes miniGlow {
+          from { opacity: 0.6; }
+          to { opacity: 1; }
+        }
+
+        /* Efecto de partículas espeluznantes */
+        .spooky-particle {
+          position: fixed;
+          width: 4px;
+          height: 4px;
+          background: #ff6b00;
+          border-radius: 50%;
+          pointer-events: none;
+          z-index: 1002;
+          animation: particle 6s linear infinite;
+        }
+
+        @keyframes particle {
+          0% {
+            opacity: 0;
+            transform: translateY(100vh) scale(0);
+          }
+          10% {
+            opacity: 1;
+            transform: translateY(90vh) scale(1);
+          }
+          90% {
+            opacity: 1;
+            transform: translateY(10vh) scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(0) scale(0);
+          }
+        }
+
+        /* Efectos de sonido visuales */
+        .sound-wave {
+          position: fixed;
+          bottom: 80px;
+          right: 20px;
+          font-size: 2rem;
+          z-index: 9998;
+          animation: soundPulse 1s ease-in-out infinite;
+          opacity: 0;
+        }
+
+        @keyframes soundPulse {
+          0%, 100% { transform: scale(1); opacity: 0; }
+          50% { transform: scale(1.5); opacity: 1; }
+        }
+
+        /* Luna espeluznante */
+        .spooky-moon {
+          position: fixed;
+          top: 50px;
+          right: 100px;
+          font-size: 3rem;
+          z-index: 996;
+          pointer-events: none;
+          animation: moonPhase 20s linear infinite;
+        }
+
+        @keyframes moonPhase {
+          0%, 100% { opacity: 0.7; transform: rotate(0deg); }
+          50% { opacity: 1; transform: rotate(180deg); }
+        }
+
+        /* Efecto de click en calabaza */
+        .click-explosion {
+          position: fixed;
+          pointer-events: none;
+          z-index: 10000;
+          animation: explode 1s ease-out;
+        }
+
+        @keyframes explode {
+          0% {
+            transform: scale(0) rotate(0deg);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(3) rotate(360deg);
+            opacity: 0;
+          }
+        }
+
+        /* Animación de shake para efectos especiales */
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-2px); }
+          75% { transform: translateX(2px); }
+        }
+
+        /* Responsivo para móviles - Halloween */
+        @media (max-width: 768px) {
+          .bat, .ghost { 
+            font-size: 1.5rem; 
+          }
+          
+          .halloween-pumpkin { 
+            font-size: 2.5rem; 
+            bottom: 15px; 
+            right: 15px; 
+          }
+          
+          .spider-web { 
+            font-size: 2.5rem; 
+          }
+          
+          .spooky-moon { 
+            font-size: 2rem; 
+            top: 20px; 
+            right: 20px; 
+          }
+          
+          .mini-pumpkin { 
+            font-size: 1rem; 
+          }
+          
+          .leaf {
+            font-size: 1rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .halloween-pumpkin { 
+            font-size: 2rem; 
+            bottom: 10px; 
+            right: 10px; 
+          }
+          
+          .spider-web { 
+            font-size: 1.8rem; 
+          }
+          
+          .spooky-moon { 
+            font-size: 1.5rem; 
+            top: 15px; 
+            right: 15px; 
+          }
+        }
     </style>
 </head>
 <body>
@@ -812,7 +1127,30 @@
         <p data-es="&copy; 2025 C&LSolutionCleaning. Todos los derechos reservados. | Servicios de limpieza profesional para casas y oficinas" data-en="&copy; 2025 C&LSolutionCleaning. All rights reserved. | Professional cleaning services for homes and offices">&copy; 2025 C&LSolutionCleaning. All rights reserved. | Professional cleaning services for homes and offices</p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <!-- ===== DECORACIONES DE HALLOWEEN ===== -->
+    <div class="halloween-overlay"></div>
+    
+    <!-- Telarañas en las esquinas -->
+    <div class="spider-web top-left">🕸️</div>
+    <div class="spider-web top-right">🕸️</div>
+    <div class="spider-web bottom-left">🕸️</div>
+    
+    <!-- Luna espeluznante -->
+    <div class="spooky-moon">🌙</div>
+    
+    <!-- Calabazas decorativas -->
+    <div class="mini-pumpkin" style="top: 60%; left: 5%;">🎃</div>
+    <div class="mini-pumpkin" style="top: 30%; right: 8%;">🎃</div>
+    <div class="mini-pumpkin" style="bottom: 40%; left: 10%;">🎃</div>
+    
+    <!-- Calabaza principal interactiva -->
+    <div class="halloween-pumpkin" id="mainPumpkin">🎃</div>
+    
+    <!-- Indicador de sonido -->
+    <div class="sound-wave" id="soundWave">🎵</div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
         let currentLang = 'en';
 
         function toggleLanguage() {
@@ -890,6 +1228,320 @@
                 header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
             }
         });
+
+        // ===== JAVASCRIPT DE HALLOWEEN 🎃👻🦇 =====
+
+        // Configuración de elementos de Halloween
+        const halloweenElements = {
+          bats: ['🦇', '🦇', '🕸️'],
+          ghosts: ['👻', '👻', '😱'],
+          leaves: ['🍂', '🍁', '🍃'],
+          spookyEmojis: ['💀', '⚰️', '🕷️', '🦴', '🧙‍♀️', '🧛‍♂️', '🔮', '⚡', '🌟']
+        };
+
+        // Contadores para control de rendimiento
+        let activeElements = {
+          bats: 0,
+          ghosts: 0,
+          leaves: 0,
+          particles: 0
+        };
+
+        const MAX_ELEMENTS = {
+          bats: 5,
+          ghosts: 3,
+          leaves: 8,
+          particles: 10
+        };
+
+        // Crear murciélagos voladores
+        function createBat() {
+          if (activeElements.bats >= MAX_ELEMENTS.bats) return;
+          
+          const bat = document.createElement("div");
+          bat.classList.add("bat");
+          bat.textContent = halloweenElements.bats[Math.floor(Math.random() * halloweenElements.bats.length)];
+          bat.style.left = Math.random() * window.innerWidth + "px";
+          bat.style.animationDelay = Math.random() * 2 + "s";
+          
+          // Agregar variación en la duración de la animación
+          bat.style.animationDuration = (Math.random() * 4 + 8) + "s";
+          
+          document.body.appendChild(bat);
+          activeElements.bats++;
+
+          setTimeout(() => {
+            if (bat.parentNode) {
+              bat.remove();
+              activeElements.bats--;
+            }
+          }, 12000);
+        }
+
+        // Crear fantasmas flotantes
+        function createGhost() {
+          if (activeElements.ghosts >= MAX_ELEMENTS.ghosts) return;
+          
+          const ghost = document.createElement("div");
+          ghost.classList.add("ghost");
+          ghost.textContent = halloweenElements.ghosts[Math.floor(Math.random() * halloweenElements.ghosts.length)];
+          ghost.style.left = Math.random() * (window.innerWidth - 100) + "px";
+          ghost.style.top = Math.random() * (window.innerHeight - 200) + 100 + "px";
+          ghost.style.animationDelay = Math.random() * 3 + "s";
+          ghost.style.animationDuration = (Math.random() * 4 + 6) + "s";
+          
+          document.body.appendChild(ghost);
+          activeElements.ghosts++;
+
+          setTimeout(() => {
+            if (ghost.parentNode) {
+              ghost.remove();
+              activeElements.ghosts--;
+            }
+          }, 8000);
+        }
+
+        // Crear hojas cayendo
+        function createLeaf() {
+          if (activeElements.leaves >= MAX_ELEMENTS.leaves) return;
+          
+          const leaf = document.createElement("div");
+          leaf.classList.add("leaf");
+          leaf.textContent = halloweenElements.leaves[Math.floor(Math.random() * halloweenElements.leaves.length)];
+          leaf.style.left = Math.random() * window.innerWidth + "px";
+          leaf.style.animationDelay = Math.random() * 3 + "s";
+          leaf.style.animationDuration = (Math.random() * 10 + 10) + "s";
+          
+          document.body.appendChild(leaf);
+          activeElements.leaves++;
+
+          setTimeout(() => {
+            if (leaf.parentNode) {
+              leaf.remove();
+              activeElements.leaves--;
+            }
+          }, 20000);
+        }
+
+        // Crear partículas espeluznantes
+        function createSpookyParticle() {
+          if (activeElements.particles >= MAX_ELEMENTS.particles) return;
+          
+          const particle = document.createElement("div");
+          particle.classList.add("spooky-particle");
+          particle.style.left = Math.random() * window.innerWidth + "px";
+          particle.style.animationDelay = Math.random() * 2 + "s";
+          
+          // Colores aleatorios para las partículas
+          const colors = ['#ff6b00', '#ff4500', '#8b0000', '#4b0082', '#ff69b4'];
+          particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+          
+          // Tamaño aleatorio
+          const size = Math.random() * 4 + 2;
+          particle.style.width = size + "px";
+          particle.style.height = size + "px";
+          
+          document.body.appendChild(particle);
+          activeElements.particles++;
+
+          setTimeout(() => {
+            if (particle.parentNode) {
+              particle.remove();
+              activeElements.particles--;
+            }
+          }, 6000);
+        }
+
+        // Efecto de explosión al hacer clic en la calabaza
+        function createClickExplosion(x, y) {
+          const explosion = document.createElement("div");
+          explosion.classList.add("click-explosion");
+          explosion.style.left = x + "px";
+          explosion.style.top = y + "px";
+          explosion.style.fontSize = "3rem";
+          explosion.textContent = halloweenElements.spookyEmojis[Math.floor(Math.random() * halloweenElements.spookyEmojis.length)];
+          document.body.appendChild(explosion);
+
+          setTimeout(() => {
+            if (explosion.parentNode) explosion.remove();
+          }, 1000);
+        }
+
+        // Crear múltiples explosiones para efecto más dramático
+        function createMultipleExplosions(centerX, centerY) {
+          const numExplosions = 5;
+          for (let i = 0; i < numExplosions; i++) {
+            setTimeout(() => {
+              const offsetX = (Math.random() - 0.5) * 200;
+              const offsetY = (Math.random() - 0.5) * 200;
+              createClickExplosion(centerX + offsetX, centerY + offsetY);
+            }, i * 100);
+          }
+        }
+
+        // Función para crear ráfaga de elementos
+        function createElementBurst() {
+          for (let i = 0; i < 6; i++) {
+            setTimeout(() => {
+              createBat();
+              if (i % 2 === 0) createGhost();
+              if (i % 3 === 0) createSpookyParticle();
+            }, i * 150);
+          }
+        }
+
+        // Efecto de shake en la página
+        function shakeScreen() {
+          document.body.style.animation = 'shake 0.6s ease-in-out';
+          setTimeout(() => {
+            document.body.style.animation = '';
+          }, 600);
+        }
+
+        // Verificar modo nocturno
+        function checkSpookyTime() {
+          const hour = new Date().getHours();
+          const isNightTime = hour >= 20 || hour <= 6;
+          
+          if (isNightTime) {
+            // Modo nocturno extra espeluznante
+            document.body.style.filter = 'contrast(1.15) brightness(0.85) hue-rotate(10deg)';
+            
+            // Más elementos durante la noche
+            const nightBatInterval = setInterval(createBat, 2200);
+            const nightGhostInterval = setInterval(createGhost, 6000);
+            const nightParticleInterval = setInterval(createSpookyParticle, 3000);
+            
+            // Guardar intervalos nocturnos
+            if (!window.halloweenIntervals) window.halloweenIntervals = {};
+            window.halloweenIntervals.nightBats = nightBatInterval;
+            window.halloweenIntervals.nightGhosts = nightGhostInterval;
+            window.halloweenIntervals.nightParticles = nightParticleInterval;
+            
+            console.log("🌙 Modo Nocturno Activado - ¡Hora Espeluznante! 👻");
+          }
+          
+          return isNightTime;
+        }
+
+        // Inicializar Halloween cuando el DOM esté listo
+        function initHalloween() {
+          console.log("🎃 Inicializando Modo Halloween... 👻");
+          
+          // Verificar si es hora espeluznante
+          const isNightMode = checkSpookyTime();
+          
+          // Intervalos principales
+          const batInterval = setInterval(createBat, 3500);
+          const ghostInterval = setInterval(createGhost, 9000);
+          const leafInterval = setInterval(createLeaf, 2500);
+          const particleInterval = setInterval(createSpookyParticle, 4500);
+          
+          // Crear algunos elementos iniciales
+          setTimeout(() => {
+            createBat();
+            createLeaf();
+          }, 1000);
+          
+          setTimeout(() => {
+            createGhost();
+            createSpookyParticle();
+          }, 3000);
+          
+          // Guardar intervalos para poder limpiarlos después
+          window.halloweenIntervals = {
+            bats: batInterval,
+            ghosts: ghostInterval,
+            leaves: leafInterval,
+            particles: particleInterval
+          };
+
+          // Configurar efectos de la calabaza principal
+          const mainPumpkin = document.getElementById('mainPumpkin');
+          const soundWave = document.getElementById('soundWave');
+          
+          if (mainPumpkin) {
+            mainPumpkin.addEventListener('click', function(e) {
+              // Efecto de sonido visual
+              if (soundWave) {
+                soundWave.style.opacity = '1';
+                setTimeout(() => {
+                  soundWave.style.opacity = '0';
+                }, 1000);
+              }
+
+              // Crear explosión en el punto de click
+              const rect = this.getBoundingClientRect();
+              const centerX = rect.left + rect.width / 2;
+              const centerY = rect.top + rect.height / 2;
+              
+              createMultipleExplosions(centerX, centerY);
+
+              // Crear ráfaga de elementos
+              createElementBurst();
+
+              // Efecto de shake
+              shakeScreen();
+              
+              // Efecto especial cada 5 clicks
+              if (!this.clickCount) this.clickCount = 0;
+              this.clickCount++;
+              
+              if (this.clickCount % 5 === 0) {
+                // Super explosión cada 5 clicks
+                setTimeout(() => {
+                  for (let i = 0; i < 10; i++) {
+                    setTimeout(() => {
+                      createBat();
+                      createSpookyParticle();
+                    }, i * 100);
+                  }
+                }, 300);
+              }
+            });
+            
+            // Efecto de hover
+            mainPumpkin.addEventListener('mouseenter', function() {
+              createSpookyParticle();
+            });
+          }
+
+          console.log("🦇 ¡Halloween Mode Completamente Activado! 🕸️");
+          console.log("👻 Haz clic en la calabaza para efectos especiales!");
+          
+          if (isNightMode) {
+            console.log("🌙 ¡Modo Nocturno Detectado - Efectos Extra Espeluznantes! 🦇");
+          }
+        }
+
+        // Optimización de rendimiento
+        function optimizePerformance() {
+          // Limpiar elementos cuando la página no está visible
+          document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+              const elements = document.querySelectorAll('.bat, .ghost, .leaf, .spooky-particle, .click-explosion');
+              elements.forEach(el => {
+                if (el.parentNode) el.remove();
+              });
+              
+              // Resetear contadores
+              Object.keys(activeElements).forEach(key => {
+                activeElements[key] = 0;
+              });
+            }
+          });
+        }
+
+        // Inicializar Halloween y optimizaciones
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function() {
+            initHalloween();
+            optimizePerformance();
+          });
+        } else {
+          initHalloween();
+          optimizePerformance();
+        }
     </script>
 </body>
 </html>
