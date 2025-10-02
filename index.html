@@ -6,32 +6,8 @@
     <title>C&L Solution Cleaning - Professional Cleaning Services for Homes and Offices</title>
     <!-- Preload hero image for faster loading on mobile -->
     <link rel="preload" href="img/hero-cleaning.jpg" as="image" media="(max-width: 768px)">
+    <!--CSS-->
     <style>
-
-        /* Halloween Bats */
-.bat {
-  position: fixed;
-  top: -50px;
-  font-size: 2rem;
-  color: black;
-  animation: fly 10s linear infinite;
-  z-index: 2000;
-  pointer-events: none;
-}
-
-
-
-/* Halloween Pumpkin */
-.halloween-pumpkin {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 3rem;
-  cursor: pointer;
-  z-index: 3000;
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
         * {
             margin: 0;
             padding: 0;
@@ -50,7 +26,7 @@
             width: 100%;
             min-width: 320px;
             overflow-x: hidden;
-        }
+            }
 
         /* Header */
         header {
@@ -62,7 +38,7 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+            }
 
         nav {
             display: flex;
@@ -79,13 +55,13 @@
               display: flex;
               align-items: center;
               gap: 8px; /* espacio entre logo y texto */
-}
+            }
 
         .logo img {
                    max-height: 40px; /* más pequeño en móviles */
                    height: auto;
                    width: auto;
-}
+                }
 
         .nav-content {
             display: flex;
@@ -140,31 +116,31 @@
 
         /* Hero Section with Cleaning Person */
         .hero {
-  background: url("img/hero-cleaning.png") no-repeat center center/cover;
-  background-attachment: scroll; /* default */
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  min-width: 100%;
-  background-color: #333; /* respaldo por si la imagen no carga */
-}
+             background: url("img/hero-cleaning.png") no-repeat center center/cover;
+             background-attachment: scroll; /* default */
+             height: 100vh;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             text-align: center;
+             color: white;
+             position: relative;
+             overflow: hidden;
+             width: 100%;
+             min-width: 100%;
+              background-color: #333; /* respaldo por si la imagen no carga */
+            }
 
-/* Fix específico para móviles */
-@media (max-width: 768px) {
-  .hero {
-    background-image: url("img/hero-cleaning.png") !important;
-    background-attachment: scroll !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-    background-size: cover !important;
-  }
-}
+        /* Fix específico para móviles */
+        @media (max-width: 768px) {
+            .hero {
+             background-image: url("img/hero-cleaning.png") !important;
+            background-attachment: scroll !important;
+             background-repeat: no-repeat !important;
+             background-position: center center !important;
+             background-size: cover !important;
+             }
+        }
      
         /* Cleaning bubbles */
         .cleaning-bubbles {
@@ -653,18 +629,6 @@
                 opacity: 0.8;
             }
         }
-            
-        @keyframes glow {
-          from { text-shadow: 0 0 5px #ff6b00; }
-            to { text-shadow: 0 0 20px #ff6b00; }
-}  
-        @keyframes fly {
-          0% { transform: translateX(-10vw) translateY(0) rotate(0deg); opacity: 0; }
-          10% { opacity: 1; }
-          50% { transform: translateX(50vw) translateY(50vh) rotate(180deg); }
-          90% { opacity: 1; }
-          100% { transform: translateX(110vw) translateY(-20vh) rotate(360deg); opacity: 0; }
-}        
 
         /* Smooth scroll */
         html {
@@ -693,13 +657,45 @@
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
+        /* Halloween 👻🎃 */
+          .bat {
+             position: fixed;
+             top: -50px;
+             font-size: 2rem;
+             color: black;
+             animation: fly 10s linear infinite;
+             z-index: 9999;
+             pointer-events: none;
+        }
+
+          @keyframes fly {
+             0% { transform: translateX(-10vw) translateY(0) rotate(0deg); opacity: 0; }
+             10% { opacity: 1; }
+             50% { transform: translateX(50vw) translateY(50vh) rotate(180deg); }
+             90% { opacity: 1; }
+             100% { transform: translateX(110vw) translateY(-20vh) rotate(360deg); opacity: 0; }
+             }
+
+         .halloween-pumpkin {
+             position: fixed;
+             bottom: 20px;
+             right: 20px;
+             font-size: 3rem;
+             cursor: pointer;
+             z-index: 9999;
+             animation: glow 2s ease-in-out infinite alternate;
+             }
+
+             @keyframes glow {
+             from { text-shadow: 0 0 5px #ff6b00; }
+             to { text-shadow: 0 0 20px #ff6b00; }
+            }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav>
-              <div class="halloween-pumpkin">🎃</div>
               <div class="logo">
             <img src="img/Logo%20C%26L.png" alt="Logo C&L" style="max-height: 60px; height: auto; width: auto; vertical-align: middle; margin-right: 10px;">
             C & L Cleaning Solution
@@ -850,9 +846,13 @@
         <p data-es="&copy; 2025 C&LSolutionCleaning. Todos los derechos reservados. | Servicios de limpieza profesional para casas y oficinas" data-en="&copy; 2025 C&LSolutionCleaning. All rights reserved. | Professional cleaning services for homes and offices">&copy; 2025 C&LSolutionCleaning. All rights reserved. | Professional cleaning services for homes and offices</p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+         <!-- 🎃 Calabaza de Halloween -->
+         <div class="halloween-pumpkin">🎃</div>
+
+         <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         let currentLang = 'en';
+
         function toggleLanguage() {
             currentLang = currentLang === 'en' ? 'es' : 'en';
             
@@ -927,24 +927,26 @@
             } else {
                 header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
             }
-         //Crear murciélagos voladores
-            <script>
-     function createBat() {
-     const bat = document.createElement("div");
-     bat.classList.add("bat");
-     bat.textContent = "🦇";
-     bat.style.left = Math.random() * window.innerWidth + "px";
-     document.body.appendChild(bat);
+            function createBat() {
+            const bat = document.createElement("div");
+                bat.classList.add("bat");
+                bat.textContent = "🦇";
+                bat.style.left = Math.random() * window.innerWidth + "px";
+                    document.body.appendChild(bat);
 
-     setTimeout(() => {
-       bat.remove();
-         }, 10000); // se elimina después de volar
-   }
-      // Crear murciélagos cada 4 segundos
-     setInterval(createBat, 4000);
-    </script>
-     </script>
+                setTimeout(() => {
+                  bat.remove();
+               }, 10000);
+            }
 
+           // Crear murciélagos cada 4 segundos
+           setInterval(createBat, 4000);
+
+        // 🎃 Efecto al hacer clic en la calabaza
+          document.querySelector('.halloween-pumpkin').addEventListener('click', () => {
+          for (let i = 0; i < 5; i++) {
+            createBat();
+           }
         });
     </script>
 </body>
