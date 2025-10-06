@@ -1105,7 +1105,7 @@
     <div class="contact-item">
                     <i>🌐</i>
     <strong data-es="Nuestras Redes Sociales" data-en="Our Socials">Nuestras Redes Sociales</strong>
-       <div style="margin-top: 10px; display: flex; gap: 15px;">
+       <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 15px; align-items: flex-start;">
 
         <!-- Instagram -->
         <a href="https://www.instagram.com/clcleaningsolution/" target="_blank"
@@ -1148,7 +1148,7 @@
     const socialTitle = document.querySelector('.contact-item strong');
     const currentLang = document.documentElement.lang || 'en';
     socialTitle.textContent = socialTitle.getAttribute('data-' + currentLang);
-</script>           
+    </script>           
 </div>
 </div>
             <div class="contact-form">
