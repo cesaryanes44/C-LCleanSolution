@@ -1087,9 +1087,10 @@
                 <div class="contact-item">
                       <i>📧</i>
                         <span>
-                            <a href="mailto:clcleaningsolution@gmail.com" 
-                               style="color: inherit; text-decoration: none;">
-                               clcleaningsolution@gmail.com
+                            <a id="emailLink"
+                              href="mailto:clcleaningsolution@gmail.com?subject=Service%20Inquiry&body=Hello%2C%20I%20would%20like%20more%20information%20about%20your%20cleaning%20services."
+                              style="color: inherit; text-decoration: none;">
+                              clcleaningsolution@gmail.com
                             </a>
                         </span>
                 </div>
@@ -1105,6 +1106,8 @@
                     <i>💬</i>
                     <span>WhatsApp: +1 (346) 4928899</span>
                 </div>
+
+                
 
                 <!-- 🔹 NUEVO BLOQUE: Redes Sociales -->
     <div class="contact-item">
@@ -1583,6 +1586,18 @@
           initHalloween();
           optimizePerformance();
         }
-    </script>
+    
+      // 🔄 Cambia el correo según el idioma del sitio
+      document.addEventListener("DOMContentLoaded", () => {
+        const emailLink = document.getElementById("emailLink");
+        const lang = document.documentElement.lang || "en"; // idioma por defecto: inglés
+
+        if (lang.startsWith("es")) {
+            emailLink.href = "mailto:clcleaningsolution@gmail.com?subject=Consulta%20de%20servicios&body=Hola%2C%20quisiera%20más%20información%20sobre%20sus%20servicios%20de%20limpieza.";
+        } else {
+            emailLink.href = "mailto:clcleaningsolution@gmail.com?subject=Service%20Inquiry&body=Hello%2C%20I%20would%20like%20more%20information%20about%20your%20cleaning%20services.";
+        }
+    });
+</script>
 </body>
 </html>
