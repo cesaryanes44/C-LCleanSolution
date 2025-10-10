@@ -1589,15 +1589,31 @@
     
       // 🔄 Cambia el correo según el idioma del sitio
       document.addEventListener("DOMContentLoaded", () => {
-        const emailLink = document.getElementById("emailLink");
-        const lang = document.documentElement.lang || "en"; // idioma por defecto: inglés
+    const emailLink = document.getElementById("emailLink");
 
+    function updateEmailLink() {
+        const lang = document.documentElement.lang || "en";
         if (lang.startsWith("es")) {
             emailLink.href = "mailto:clcleaningsolution@gmail.com?subject=Consulta%20de%20servicios&body=Hola%2C%20quisiera%20más%20información%20sobre%20sus%20servicios%20de%20limpieza.";
         } else {
             emailLink.href = "mailto:clcleaningsolution@gmail.com?subject=Service%20Inquiry&body=Hello%2C%20I%20would%20like%20more%20information%20about%20your%20cleaning%20services.";
         }
+    }
+
+    // Ejecutar al cargar la página
+    updateEmailLink();
+
+    // 🌀 Detectar si el idioma cambia dinámicamente
+    const observer = new MutationObserver(() => updateEmailLink());
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+
+    // Si tienes botones manuales para cambiar idioma, también puedes llamarlo así:
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            setTimeout(updateEmailLink, 200); // pequeño delay para asegurar que <html lang> cambió
+        });
     });
+});
 </script>
 </body>
 </html>
