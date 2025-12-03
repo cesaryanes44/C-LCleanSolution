@@ -29,7 +29,7 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2d5016 0%, #1a4d0a 100%);
             color: white;
             padding: 1rem 0;
             position: fixed;
@@ -49,15 +49,15 @@
         }
 
         .logo {
-              font-size: 1rem; /* ajusta según convenga */
-              white-space: nowrap; /* evita que se rompa en varias líneas */
+              font-size: 1rem;
+              white-space: nowrap;
               display: flex;
               align-items: center;
-              gap: 8px; /* espacio entre logo y texto */
+              gap: 8px;
         }
 
         .logo img {
-                   max-height: 40px; /* más pequeño en móviles */
+                   max-height: 40px;
                    height: auto;
                    width: auto;
         }
@@ -84,7 +84,7 @@
         }
 
         nav ul li a:hover {
-            color: #f0f0f0;
+            color: #ffd700;
         }
 
         /* Language Toggle Button */
@@ -115,8 +115,9 @@
 
         /* Hero Section with Cleaning Person */
         .hero {
-          background: url("img/hero-cleaning.png") no-repeat center center/cover;
-          background-attachment: scroll; /* default */
+          background: linear-gradient(135deg, rgba(45, 80, 22, 0.9) 0%, rgba(26, 77, 10, 0.9) 100%), 
+                      url("img/hero-cleaning.png") no-repeat center center/cover;
+          background-attachment: scroll;
           height: 100vh;
           display: flex;
           align-items: center;
@@ -127,13 +128,14 @@
           overflow: hidden;
           width: 100%;
           min-width: 100%;
-          background-color: #333; /* respaldo por si la imagen no carga */
+          background-color: #2d5016;
         }
 
         /* Fix específico para móviles */
         @media (max-width: 768px) {
           .hero {
-            background-image: url("img/hero-cleaning.png") !important;
+            background-image: linear-gradient(135deg, rgba(45, 80, 22, 0.9) 0%, rgba(26, 77, 10, 0.9) 100%), 
+                             url("img/hero-cleaning.png") !important;
             background-attachment: scroll !important;
             background-repeat: no-repeat !important;
             background-position: center center !important;
@@ -141,7 +143,7 @@
           }
         }
      
-        /* Cleaning bubbles */
+        /* Cleaning bubbles con efectos navideños */
         .cleaning-bubbles {
             position: absolute;
             top: 0;
@@ -154,7 +156,7 @@
 
         .bubble {
             position: absolute;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             animation: float 6s ease-in-out infinite;
         }
@@ -208,19 +210,19 @@
             font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease-out;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* sombra para mayor legibilidad */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
         }
 
         .hero-content p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease-out 0.3s both;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* sombra ligeramente más suave */
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
         }
 
         .cta-button {
             display: inline-block;
-            background: #ff6b6b;
+            background: #dc2626;
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -231,9 +233,9 @@
         }
 
         .cta-button:hover {
-            background: #ff5252;
+            background: #b91c1c;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.4);
         }
 
         /* Sections */
@@ -247,12 +249,12 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: #333;
+            color: #2d5016;
         }
 
         /* Services */
         .services {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
             width: 100%;
             min-width: 100%;
         }
@@ -271,6 +273,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
             transition: transform 0.3s;
+            border: 2px solid #dc2626;
         }
 
         .service-card:hover {
@@ -285,7 +288,7 @@
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #667eea;
+            color: #dc2626;
         }
 
         /* About */
@@ -318,15 +321,13 @@
         }
 
         .about-features li::before {
-            content: "✓";
-            color: #4caf50;
-            font-weight: bold;
+            content: "🎄";
             margin-right: 10px;
         }
 
         /* Contact */
         .contact {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
             width: 100%;
             min-width: 100%;
         }
@@ -343,6 +344,7 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid #dc2626;
         }
 
         .contact-item {
@@ -354,7 +356,7 @@
 
         .contact-item i {
             margin-right: 15px;
-            color: #667eea;
+            color: #dc2626;
             width: 20px;
         }
 
@@ -363,6 +365,7 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid #dc2626;
         }
 
         .form-group {
@@ -390,7 +393,7 @@
         }
 
         .submit-btn {
-            background: #667eea;
+            background: #dc2626;
             color: white;
             padding: 12px 30px;
             border: none;
@@ -401,7 +404,7 @@
         }
 
         .submit-btn:hover {
-            background: #5a6fd8;
+            background: #b91c1c;
         }
 
         .form-buttons {
@@ -413,7 +416,7 @@
 
         .open-form-btn {
             display: inline-block;
-            background: #667eea;
+            background: #dc2626;
             color: white;
             padding: 12px 20px;
             text-decoration: none;
@@ -424,12 +427,12 @@
         }
 
         .open-form-btn:hover {
-            background: #5a6fd8;
+            background: #b91c1c;
         }
 
         /* Footer */
         footer {
-            background: #333;
+            background: #2d5016;
             color: white;
             text-align: center;
             padding: 2rem;
@@ -438,12 +441,9 @@
         /* Image loading optimization for mobile */
         @media (max-width: 768px) {
             .hero {
-                /* Preload hint for mobile browsers */
                 will-change: transform;
-                /* Ensure proper rendering on mobile */
                 -webkit-transform: translateZ(0);
                 transform: translateZ(0);
-                /* Better font rendering on mobile */
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }
@@ -458,12 +458,12 @@
         /* Responsive */
         @media (max-width: 768px) {
     nav {
-        flex-direction: column; /* Logo arriba, contenido debajo */
+        flex-direction: column;
         align-items: center;
     }
 
     .nav-content {
-        flex-direction: row; /* Menú y botón idioma en la misma línea */
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -471,7 +471,7 @@
     }
 
     nav ul {
-        flex-direction: row; /* menú horizontal */
+        flex-direction: row;
         gap: 1rem;
         margin: 0;
         padding: 0;
@@ -482,7 +482,7 @@
     }
             
             .logo img {
-    max-height: 40px; /* más pequeño en móviles */
+    max-height: 40px;
 }
 
             nav ul li a {
@@ -506,34 +506,6 @@
                 margin-bottom: 1.5rem;
             }
 
-            /* Mobile optimization for hero background */
-            .hero {
-                /* Force fixed background for mobile to improve performance */
-                background-attachment: scroll;
-                /* Ensure image loads properly on mobile */
-                background-position: center center;
-                background-repeat: no-repeat;
-                /* Adjust height for mobile browsers */
-                height: 100vh;
-                min-height: 600px;
-                /* Better gradient overlay for mobile readability */
-                background: 
-                    linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%),
-                    url("img/hero-cleaning.jpg") no-repeat center center;
-                background-size: cover;
-            }
-
-            /* Hide some decorative elements on mobile for better performance */
-            .hero::before,
-            .hero::after {
-                display: none;
-            }
-
-            /* Simplify bubbles on mobile */
-            .cleaning-bubbles .bubble:nth-child(n+4) {
-                display: none;
-            }
-
             .about-content,
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -548,7 +520,7 @@
             }
         }
 
-        /* Extra responsive for very small screens (iPhone SE, etc.) */
+        /* Extra responsive for very small screens */
         @media (max-width: 480px) {
             nav {
                 padding: 0.3rem 0.8rem;
@@ -582,24 +554,6 @@
                 font-size: 1rem;
             }
 
-            /* Extra small screen hero optimizations */
-            .hero {
-                min-height: 500px;
-                /* Even stronger overlay for small screens */
-                background: 
-                    linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
-                    url("img/hero-cleaning.jpg") no-repeat center center;
-                background-size: cover;
-                /* Ensure no horizontal scrolling */
-                width: 100vw;
-                margin-left: calc(50% - 50vw);
-            }
-
-            /* Disable all decorative elements on very small screens */
-            .cleaning-bubbles {
-                display: none;
-            }
-
             .cta-button {
                 padding: 12px 24px;
                 font-size: 0.9rem;
@@ -621,7 +575,7 @@
         @keyframes float {
             0%, 100% {
                 transform: translateY(0) rotate(0deg);
-                opacity: 0.2;
+                opacity: 0.3;
             }
             50% {
                 transform: translateY(-20px) rotate(180deg);
@@ -657,10 +611,10 @@
             overflow-wrap: break-word;
         }
 
-        /* ===== DECORACIONES DE ACCIÓN DE GRACIAS 🦃🍂🥧 ===== */
+        /* ===== DECORACIONES DE NAVIDAD ❄️🎄🎅 ===== */
 
-        /* Overlay de Acción de Gracias para toda la página */
-        .thanksgiving-overlay {
+        /* Overlay de Navidad para toda la página */
+        .christmas-overlay {
           position: fixed;
           top: 0;
           left: 0;
@@ -671,179 +625,253 @@
           overflow: hidden;
         }
 
-        /* Pavos voladores */
-        .turkey {
+        /* Copos de nieve cayendo */
+        .snowflake {
           position: fixed;
-          top: -50px;
-          font-size: 2rem;
-          color: #d2691e;
-          animation: fly 12s linear infinite;
-          z-index: 9999;
-          pointer-events: none;
-          filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
-        }
-
-        @keyframes fly {
-          0% { 
-            transform: translateX(-10vw) translateY(0) rotate(0deg); 
-            opacity: 0; 
-          }
-          10% { opacity: 1; }
-          25% { 
-            transform: translateX(25vw) translateY(20vh) rotate(90deg); 
-          }
-          50% { 
-            transform: translateX(50vw) translateY(50vh) rotate(180deg); 
-          }
-          75% { 
-            transform: translateX(75vw) translateY(30vh) rotate(270deg); 
-          }
-          90% { opacity: 1; }
-          100% { 
-            transform: translateX(110vw) translateY(-20vh) rotate(360deg); 
-            opacity: 0; 
-          }
-        }
-
-        /* Granjeros flotantes */
-        .farmer {
-          position: fixed;
-          font-size: 2.5rem;
-          color: rgba(139, 69, 19, 0.8);
-          animation: floatFarmer 8s ease-in-out infinite;
+          top: -10px;
+          color: white;
+          font-size: 1rem;
+          animation: snowFall linear infinite;
           z-index: 1001;
           pointer-events: none;
-          filter: drop-shadow(0 0 10px rgba(139,69,19,0.5));
+          text-shadow: 0 0 10px rgba(255,255,255,0.8);
         }
 
-        @keyframes floatFarmer {
-          0%, 100% { 
-            transform: translateY(0) rotate(-5deg);
-            opacity: 0.6;
-          }
-          25% { 
-            transform: translateY(-20px) rotate(5deg);
+        @keyframes snowFall {
+          0% {
+            transform: translateY(-100vh) rotate(0deg);
             opacity: 1;
           }
-          50% { 
-            transform: translateY(-10px) rotate(-3deg);
-            opacity: 0.8;
-          }
-          75% { 
-            transform: translateY(-30px) rotate(3deg);
-            opacity: 1;
-          }
-        }
-
-        /* Hojas de otoño cayendo */
-        .falling-leaf {
-          position: fixed;
-          top: -50px;
-          font-size: 1.5rem;
-          animation: fallLeaf 15s linear infinite;
-          z-index: 999;
-          pointer-events: none;
-        }
-
-        @keyframes fallLeaf {
-          0% { 
-            transform: translateY(-50px) rotate(0deg);
-            opacity: 1;
-          }
-          50% { 
-            transform: translateY(50vh) rotate(180deg);
-            opacity: 0.7;
-          }
-          100% { 
+          100% {
             transform: translateY(100vh) rotate(360deg);
             opacity: 0;
           }
         }
 
-        /* Gorditas en las esquinas */
-        .gordita {
+        /* Copos de nieve más grandes */
+        .big-snowflake {
           position: fixed;
-          font-size: 4rem;
-          color: rgba(210, 105, 30, 0.3);
+          top: -20px;
+          color: rgba(255,255,255,0.9);
+          font-size: 1.5rem;
+          animation: bigSnowFall linear infinite;
+          z-index: 1001;
+          pointer-events: none;
+          text-shadow: 0 0 15px rgba(255,255,255,1);
+        }
+
+        @keyframes bigSnowFall {
+          0% {
+            transform: translateY(-100vh) translateX(0) rotate(0deg);
+            opacity: 0.9;
+          }
+          25% {
+            transform: translateY(25vh) translateX(50px) rotate(90deg);
+            opacity: 1;
+          }
+          50% {
+            transform: translateY(50vh) translateX(-30px) rotate(180deg);
+            opacity: 0.8;
+          }
+          75% {
+            transform: translateY(75vh) translateX(40px) rotate(270deg);
+            opacity: 0.9;
+          }
+          100% {
+            transform: translateY(100vh) translateX(0) rotate(360deg);
+            opacity: 0;
+          }
+        }
+
+        /* Santa Claus volando */
+        .santa {
+          position: fixed;
+          top: -100px;
+          font-size: 3rem;
+          animation: flySanta 15s linear infinite;
+          z-index: 9999;
+          pointer-events: none;
+          filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.7));
+        }
+
+        @keyframes flySanta {
+          0% { 
+            transform: translateX(-10vw) translateY(0) rotate(0deg); 
+            opacity: 0; 
+          }
+          10% { opacity: 1; }
+          20% { 
+            transform: translateX(20vw) translateY(-50px) rotate(-10deg); 
+          }
+          40% { 
+            transform: translateX(40vw) translateY(-30px) rotate(10deg); 
+          }
+          60% { 
+            transform: translateX(60vw) translateY(-60px) rotate(-5deg); 
+          }
+          80% { 
+            transform: translateX(80vw) translateY(-40px) rotate(5deg); 
+          }
+          90% { opacity: 1; }
+          100% { 
+            transform: translateX(110vw) translateY(-50px) rotate(0deg); 
+            opacity: 0; 
+          }
+        }
+
+        /* Renos voladores */
+        .reindeer {
+          position: fixed;
+          top: -100px;
+          font-size: 2.5rem;
+          animation: flyReindeer 18s linear infinite;
+          z-index: 9998;
+          pointer-events: none;
+          filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.6));
+        }
+
+        @keyframes flyReindeer {
+          0% { 
+            transform: translateX(110vw) translateY(0) rotate(0deg); 
+            opacity: 0; 
+          }
+          10% { opacity: 1; }
+          30% { 
+            transform: translateX(80vw) translateY(-40px) rotate(15deg); 
+          }
+          50% { 
+            transform: translateX(50vw) translateY(-60px) rotate(-10deg); 
+          }
+          70% { 
+            transform: translateX(20vw) translateY(-30px) rotate(10deg); 
+          }
+          90% { opacity: 1; }
+          100% { 
+            transform: translateX(-10vw) translateY(-50px) rotate(0deg); 
+            opacity: 0; 
+          }
+        }
+
+        /* Árboles de Navidad flotantes */
+        .floating-tree {
+          position: fixed;
+          font-size: 2rem;
+          color: rgba(34, 197, 94, 0.8);
+          animation: floatTree 10s ease-in-out infinite;
+          z-index: 1001;
+          pointer-events: none;
+          filter: drop-shadow(0 0 10px rgba(34,197,94,0.5));
+        }
+
+        @keyframes floatTree {
+          0%, 100% { 
+            transform: translateY(0) rotate(-3deg);
+            opacity: 0.7;
+          }
+          25% { 
+            transform: translateY(-20px) rotate(3deg);
+            opacity: 1;
+          }
+          50% { 
+            transform: translateY(-15px) rotate(-2deg);
+            opacity: 0.9;
+          }
+          75% { 
+            transform: translateY(-25px) rotate(2deg);
+            opacity: 1;
+          }
+        }
+
+        /* Regalos en las esquinas */
+        .gift {
+          position: fixed;
+          font-size: 3rem;
+          color: rgba(220, 38, 38, 0.4);
           z-index: 998;
           pointer-events: none;
-          animation: gorditaGlow 3s ease-in-out infinite alternate;
+          animation: giftGlow 3s ease-in-out infinite alternate;
         }
 
-        .gordita.top-left {
-          top: 10px;
-          left: 10px;
-          transform: rotate(0deg);
+        .gift.top-left {
+          top: 20px;
+          left: 20px;
+          transform: rotate(-10deg);
         }
 
-        .gordita.top-right {
-          top: 10px;
-          right: 10px;
-          transform: rotate(90deg);
+        .gift.top-right {
+          top: 20px;
+          right: 20px;
+          transform: rotate(10deg);
         }
 
-        .gordita.bottom-left {
-          bottom: 10px;
-          left: 10px;
-          transform: rotate(-90deg);
+        .gift.bottom-left {
+          bottom: 20px;
+          left: 20px;
+          transform: rotate(5deg);
         }
 
-        @keyframes gorditaGlow {
-          from { text-shadow: 0 0 5px rgba(210,105,30,0.3); }
-          to { text-shadow: 0 0 15px rgba(210,105,30,0.6); }
+        .gift.bottom-right {
+          bottom: 20px;
+          right: 20px;
+          transform: rotate(-5deg);
         }
 
-        /* Pavo principal */
-        .thanksgiving-turkey {
+        @keyframes giftGlow {
+          from { text-shadow: 0 0 5px rgba(220,38,38,0.4); }
+          to { text-shadow: 0 0 15px rgba(220,38,38,0.8); }
+        }
+
+        /* Santa principal interactivo */
+        .main-santa {
           position: fixed;
           bottom: 20px;
           right: 20px;
-          font-size: 3.5rem;
+          font-size: 4rem;
           cursor: pointer;
           z-index: 9999;
-          animation: turkeyGlow 2s ease-in-out infinite alternate;
+          animation: santaGlow 2s ease-in-out infinite alternate;
           transition: transform 0.3s ease;
         }
 
-        .thanksgiving-turkey:hover {
-          transform: scale(1.2) rotate(10deg);
+        .main-santa:hover {
+          transform: scale(1.2) rotate(15deg);
         }
 
-        @keyframes turkeyGlow {
+        @keyframes santaGlow {
           from { 
-            text-shadow: 0 0 5px #d2691e, 0 0 10px #d2691e; 
+            text-shadow: 0 0 5px #dc2626, 0 0 10px #dc2626; 
             filter: brightness(1);
           }
           to { 
-            text-shadow: 0 0 20px #d2691e, 0 0 30px #d2691e, 0 0 40px #cd853f; 
+            text-shadow: 0 0 20px #dc2626, 0 0 30px #dc2626, 0 0 40px #b91c1c; 
             filter: brightness(1.3);
           }
         }
 
-        /* Pequeñas calabazas decorativas */
-        .mini-autumn {
+        /* Pequeños elementos navideños decorativos */
+        .mini-christmas {
           position: fixed;
           font-size: 1.5rem;
           z-index: 997;
           pointer-events: none;
-          animation: autumnGlow 3s ease-in-out infinite alternate;
+          animation: christmasGlow 3s ease-in-out infinite alternate;
         }
 
-        @keyframes autumnGlow {
-          from { opacity: 0.6; }
+        @keyframes christmasGlow {
+          from { opacity: 0.7; }
           to { opacity: 1; }
         }
 
-        /* Efecto de partículas de otoño */
-        .autumn-particle {
+        /* Efecto de partículas navideñas */
+        .christmas-particle {
           position: fixed;
           width: 4px;
           height: 4px;
-          background: #d2691e;
+          background: #ffd700;
           border-radius: 50%;
           pointer-events: none;
           z-index: 1002;
-          animation: particle 6s linear infinite;
+          animation: particle 8s linear infinite;
         }
 
         @keyframes particle {
@@ -865,39 +893,39 @@
           }
         }
 
-        /* Efectos visuales de otoño */
-        .autumn-wave {
+        /* Efectos visuales navideños */
+        .christmas-wave {
           position: fixed;
           bottom: 80px;
           right: 20px;
           font-size: 2rem;
           z-index: 9998;
-          animation: autumnPulse 1s ease-in-out infinite;
+          animation: christmasPulse 1.5s ease-in-out infinite;
           opacity: 0;
         }
 
-        @keyframes autumnPulse {
+        @keyframes christmasPulse {
           0%, 100% { transform: scale(1); opacity: 0; }
           50% { transform: scale(1.5); opacity: 1; }
         }
 
-        /* Luna de cosecha */
-        .harvest-moon {
+        /* Estrella de Belén */
+        .star {
           position: fixed;
           top: 50px;
-          right: 100px;
+          left: 100px;
           font-size: 3rem;
           z-index: 996;
           pointer-events: none;
-          animation: moonPhase 20s linear infinite;
+          animation: starTwinkle 3s linear infinite;
         }
 
-        @keyframes moonPhase {
-          0%, 100% { opacity: 0.7; transform: rotate(0deg); }
-          50% { opacity: 1; transform: rotate(180deg); }
+        @keyframes starTwinkle {
+          0%, 100% { opacity: 0.7; transform: rotate(0deg) scale(1); }
+          50% { opacity: 1; transform: rotate(180deg) scale(1.2); }
         }
 
-        /* Efecto de click en pavo */
+        /* Efecto de click en Santa */
         .click-explosion {
           position: fixed;
           pointer-events: none;
@@ -923,57 +951,81 @@
           75% { transform: translateX(2px); }
         }
 
-        /* Responsivo para móviles - Acción de Gracias */
+        /* Responsivo para móviles - Navidad */
         @media (max-width: 768px) {
-          .turkey, .farmer { 
-            font-size: 1.5rem; 
+          .santa, .reindeer { 
+            font-size: 2rem; 
           }
           
-          .thanksgiving-turkey { 
-            font-size: 2.5rem; 
+          .main-santa { 
+            font-size: 3rem; 
             bottom: 15px; 
             right: 15px; 
           }
           
-          .gordita { 
-            font-size: 2.5rem; 
+          .gift { 
+            font-size: 2rem; 
           }
           
-          .harvest-moon { 
+          .star { 
             font-size: 2rem; 
             top: 20px; 
-            right: 20px; 
+            left: 20px; 
           }
           
-          .mini-autumn { 
+          .mini-christmas { 
             font-size: 1rem; 
           }
           
-          .falling-leaf {
-            font-size: 1rem;
+          .snowflake {
+            font-size: 0.8rem;
           }
         }
 
         @media (max-width: 480px) {
-          .thanksgiving-turkey { 
-            font-size: 2rem; 
+          .main-santa { 
+            font-size: 2.5rem; 
             bottom: 10px; 
             right: 10px; 
           }
           
-          .gordita { 
-            font-size: 1.8rem; 
+          .gift { 
+            font-size: 1.5rem; 
           }
           
-          .harvest-moon { 
+          .star { 
             font-size: 1.5rem; 
             top: 15px; 
-            right: 15px; 
+            left: 15px; 
+          }
+        }
+
+        /* Efecto navideño en el fondo */
+        .christmas-sky {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, #0c1b3a 0%, #1e3a8a 50%, #3b82f6 100%);
+          opacity: 0.1;
+          z-index: -1;
+          pointer-events: none;
+        }
+
+        /* Modo oscuro navideño para navegadores compatibles */
+        @media (prefers-color-scheme: dark) {
+          body {
+            background: linear-gradient(135deg, #0c1b3a 0%, #1e3a8a 100%);
+            color: #f8fafc;
           }
         }
     </style>
 </head>
 <body>
+    <!-- Cielo navideño de fondo -->
+    <div class="christmas-sky"></div>
+
     <!-- Header -->
     <header>
         <nav>
@@ -998,7 +1050,7 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <!-- Cleaning bubbles animation -->
+        <!-- Cleaning bubbles animation con efectos navideños -->
         <div class="cleaning-bubbles">
             <div class="bubble"></div>
             <div class="bubble"></div>
@@ -1094,7 +1146,7 @@
                 </div>
                 <div class="contact-item">
                     <i>📍</i>
-                    <span data-es="Texas, Houston, EEUU" data-en="Texas, Houston, USA">Texas, Houston, EEUU</span>
+                    <span data-es="Texas, Houston, EEUU" data-en="Texas, Houston, USA">Texas, Houston, USA</span>
                 </div>
                 <div class="contact-item">
                     <i>🕒</i>
@@ -1169,29 +1221,31 @@
         <p data-es="&copy; 2025 C&LSolutionCleaning. Todos los derechos reservados. | Servicios de limpieza profesional para casas y oficinas" data-en="&copy; 2025 C&LSolutionCleaning. All rights reserved. | Professional cleaning services for homes and offices">&copy; 2025 C&LSolutionCleaning. All rights reserved. | Professional cleaning services for homes and offices</p>
     </footer>
 
-    <!-- ===== DECORACIONES DE ACCIÓN DE GRACIAS ===== -->
-    <div class="thanksgiving-overlay"></div>
+    <!-- ===== DECORACIONES DE NAVIDAD ===== -->
+    <div class="christmas-overlay"></div>
     
-    <!-- Gorditas en las esquinas -->
-    <div class="gordita top-left">🥧</div>
-    <div class="gordita top-right">🥧</div>
-    <div class="gordita bottom-left">🥧</div>
+    <!-- Regalos en las esquinas -->
+    <div class="gift top-left">🎁</div>
+    <div class="gift top-right">🎁</div>
+    <div class="gift bottom-left">🎁</div>
+    <div class="gift bottom-right">🎁</div>
     
-    <!-- Luna de cosecha -->
-    <div class="harvest-moon">🌕</div>
+    <!-- Estrella de Belén -->
+    <div class="star">⭐</div>
     
-    <!-- Elementos de otoño decorativos -->
-    <div class="mini-autumn" style="top: 60%; left: 5%;">🍂</div>
-    <div class="mini-autumn" style="top: 30%; right: 8%;">🍁</div>
-    <div class="mini-autumn" style="bottom: 40%; left: 10%;">🌽</div>
+    <!-- Elementos navideños decorativos -->
+    <div class="mini-christmas" style="top: 60%; left: 5%;">🎄</div>
+    <div class="mini-christmas" style="top: 30%; right: 8%;">🎅</div>
+    <div class="mini-christmas" style="bottom: 40%; left: 10%;">🔔</div>
+    <div class="mini-christmas" style="top: 20%; left: 70%;">❄️</div>
     
-    <!-- Pavo principal interactivo -->
-    <div class="thanksgiving-turkey" id="mainTurkey">🦃</div>
+    <!-- Santa principal interactivo -->
+    <div class="main-santa" id="mainSanta">🎅</div>
     
-    <!-- Indicador de sonido -->
-    <div class="autumn-wave" id="autumnWave">🎵</div>
+    <!-- Indicador de música navideña -->
+    <div class="christmas-wave" id="christmasWave">🎵</div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         let currentLang = 'en';
 
@@ -1265,121 +1319,146 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(102, 126, 234, 0.95)';
+                header.style.background = 'rgba(45, 80, 22, 0.95)';
             } else {
-                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                header.style.background = 'linear-gradient(135deg, #2d5016 0%, #1a4d0a 100%)';
             }
         });
 
-        // ===== JAVASCRIPT DE ACCIÓN DE GRACIAS 🦃🍂🥧 =====
+        // ===== JAVASCRIPT DE NAVIDAD ❄️🎄🎅 =====
 
-        // Configuración de elementos de Acción de Gracias
-        const thanksgivingElements = {
-          turkeys: ['🦃', '🦃', '🕸️'],
-          farmers: ['👨‍🌾', '👩‍🌾', '😁'],
-          autumnLeaves: ['🍂', '🍁', '🍃'],
-          harvestEmojis: ['🌽', '🥧', '🧡', '🦴', '🏠', '🎃', '🥕', '🍎', '🌟']
+        // Configuración de elementos navideños
+        const christmasElements = {
+          santas: ['🎅', '🎅', '🎄'],
+          reindeers: ['🦌', '🦌', '🦌'],
+          snowflakes: ['❄️', '⭐', '💫'],
+          treeEmojis: ['🎄', '🎁', '🔔', '⭐', '🕯️', '🎅', '🦌', '🎂', '🍭', '🌟']
         };
 
         // Contadores para control de rendimiento
         let activeElements = {
-          turkeys: 0,
-          farmers: 0,
-          autumnLeaves: 0,
+          snowflakes: 0,
+          bigSnowflakes: 0,
+          santas: 0,
+          reindeers: 0,
           particles: 0
         };
 
         const MAX_ELEMENTS = {
-          turkeys: 5,
-          farmers: 3,
-          autumnLeaves: 8,
-          particles: 10
+          snowflakes: 50,
+          bigSnowflakes: 15,
+          santas: 3,
+          reindeers: 2,
+          particles: 20
         };
 
-        // Crear pavos voladores
-        function createTurkey() {
-          if (activeElements.turkeys >= MAX_ELEMENTS.turkeys) return;
+        // Crear copos de nieve
+        function createSnowflake() {
+          if (activeElements.snowflakes >= MAX_ELEMENTS.snowflakes) return;
           
-          const turkey = document.createElement("div");
-          turkey.classList.add("turkey");
-          turkey.textContent = thanksgivingElements.turkeys[Math.floor(Math.random() * thanksgivingElements.turkeys.length)];
-          turkey.style.left = Math.random() * window.innerWidth + "px";
-          turkey.style.animationDelay = Math.random() * 2 + "s";
+          const snowflake = document.createElement("div");
+          snowflake.classList.add("snowflake");
+          snowflake.textContent = christmasElements.snowflakes[Math.floor(Math.random() * christmasElements.snowflakes.length)];
+          snowflake.style.left = Math.random() * window.innerWidth + "px";
+          snowflake.style.animationDelay = Math.random() * 3 + "s";
           
-          // Agregar variación en la duración de la animación
-          turkey.style.animationDuration = (Math.random() * 4 + 8) + "s";
+          // Variación en la duración de la animación
+          snowflake.style.animationDuration = (Math.random() * 5 + 8) + "s";
           
-          document.body.appendChild(turkey);
-          activeElements.turkeys++;
+          document.body.appendChild(snowflake);
+          activeElements.snowflakes++;
 
           setTimeout(() => {
-            if (turkey.parentNode) {
-              turkey.remove();
-              activeElements.turkeys--;
+            if (snowflake.parentNode) {
+              snowflake.remove();
+              activeElements.snowflakes--;
             }
-          }, 12000);
+          }, 13000);
         }
 
-        // Crear granjeros flotantes
-        function createFarmer() {
-          if (activeElements.farmers >= MAX_ELEMENTS.farmers) return;
+        // Crear copos de nieve grandes
+        function createBigSnowflake() {
+          if (activeElements.bigSnowflakes >= MAX_ELEMENTS.bigSnowflakes) return;
           
-          const farmer = document.createElement("div");
-          farmer.classList.add("farmer");
-          farmer.textContent = thanksgivingElements.farmers[Math.floor(Math.random() * thanksgivingElements.farmers.length)];
-          farmer.style.left = Math.random() * (window.innerWidth - 100) + "px";
-          farmer.style.top = Math.random() * (window.innerHeight - 200) + 100 + "px";
-          farmer.style.animationDelay = Math.random() * 3 + "s";
-          farmer.style.animationDuration = (Math.random() * 4 + 6) + "s";
+          const bigSnowflake = document.createElement("div");
+          bigSnowflake.classList.add("big-snowflake");
+          bigSnowflake.textContent = '❄️';
+          bigSnowflake.style.left = Math.random() * window.innerWidth + "px";
+          bigSnowflake.style.animationDelay = Math.random() * 2 + "s";
+          bigSnowflake.style.animationDuration = (Math.random() * 3 + 12) + "s";
           
-          document.body.appendChild(farmer);
-          activeElements.farmers++;
+          document.body.appendChild(bigSnowflake);
+          activeElements.bigSnowflakes++;
 
           setTimeout(() => {
-            if (farmer.parentNode) {
-              farmer.remove();
-              activeElements.farmers--;
+            if (bigSnowflake.parentNode) {
+              bigSnowflake.remove();
+              activeElements.bigSnowflakes--;
             }
-          }, 8000);
+          }, 15000);
         }
 
-        // Crear hojas de otoño cayendo
-        function createAutumnLeaf() {
-          if (activeElements.autumnLeaves >= MAX_ELEMENTS.autumnLeaves) return;
+        // Crear Santa Claus volando
+        function createSanta() {
+          if (activeElements.santas >= MAX_ELEMENTS.santas) return;
           
-          const leaf = document.createElement("div");
-          leaf.classList.add("falling-leaf");
-          leaf.textContent = thanksgivingElements.autumnLeaves[Math.floor(Math.random() * thanksgivingElements.autumnLeaves.length)];
-          leaf.style.left = Math.random() * window.innerWidth + "px";
-          leaf.style.animationDelay = Math.random() * 3 + "s";
-          leaf.style.animationDuration = (Math.random() * 10 + 10) + "s";
+          const santa = document.createElement("div");
+          santa.classList.add("santa");
+          santa.textContent = christmasElements.santas[Math.floor(Math.random() * christmasElements.santas.length)];
+          santa.style.left = Math.random() * window.innerWidth + "px";
+          santa.style.animationDelay = Math.random() * 5 + "s";
           
-          document.body.appendChild(leaf);
-          activeElements.autumnLeaves++;
+          // Variación en la duración de la animación
+          santa.style.animationDuration = (Math.random() * 5 + 12) + "s";
+          
+          document.body.appendChild(santa);
+          activeElements.santas++;
 
           setTimeout(() => {
-            if (leaf.parentNode) {
-              leaf.remove();
-              activeElements.autumnLeaves--;
+            if (santa.parentNode) {
+              santa.remove();
+              activeElements.santas--;
             }
-          }, 20000);
+          }, 17000);
         }
 
-        // Crear partículas de otoño
-        function createAutumnParticle() {
+        // Crear renos voladores
+        function createReindeer() {
+          if (activeElements.reindeers >= MAX_ELEMENTS.reindeers) return;
+          
+          const reindeer = document.createElement("div");
+          reindeer.classList.add("reindeer");
+          reindeer.textContent = christmasElements.reindeers[Math.floor(Math.random() * christmasElements.reindeers.length)];
+          reindeer.style.left = Math.random() * window.innerWidth + "px";
+          reindeer.style.animationDelay = Math.random() * 4 + "s";
+          reindeer.style.animationDuration = (Math.random() * 6 + 15) + "s";
+          
+          document.body.appendChild(reindeer);
+          activeElements.reindeers++;
+
+          setTimeout(() => {
+            if (reindeer.parentNode) {
+              reindeer.remove();
+              activeElements.reindeers--;
+            }
+          }, 21000);
+        }
+
+        // Crear partículas navideñas
+        function createChristmasParticle() {
           if (activeElements.particles >= MAX_ELEMENTS.particles) return;
           
           const particle = document.createElement("div");
-          particle.classList.add("autumn-particle");
+          particle.classList.add("christmas-particle");
           particle.style.left = Math.random() * window.innerWidth + "px";
           particle.style.animationDelay = Math.random() * 2 + "s";
           
-          // Colores aleatorios para las partículas
-          const colors = ['#d2691e', '#cd853f', '#8b4513', '#a0522d', '#ff8c00'];
+          // Colores dorados aleatorios
+          const colors = ['#ffd700', '#ffeb3b', '#ffc107', '#fff176', '#ffec64'];
           particle.style.background = colors[Math.floor(Math.random() * colors.length)];
           
           // Tamaño aleatorio
-          const size = Math.random() * 4 + 2;
+          const size = Math.random() * 3 + 2;
           particle.style.width = size + "px";
           particle.style.height = size + "px";
           
@@ -1391,17 +1470,34 @@
               particle.remove();
               activeElements.particles--;
             }
-          }, 6000);
+          }, 8000);
         }
 
-        // Efecto de explosión al hacer clic en el pavo
+        // Crear árboles flotantes
+        function createFloatingTree() {
+          const tree = document.createElement("div");
+          tree.classList.add("floating-tree");
+          tree.textContent = '🎄';
+          tree.style.left = Math.random() * (window.innerWidth - 100) + "px";
+          tree.style.top = Math.random() * (window.innerHeight - 200) + 100 + "px";
+          tree.style.animationDelay = Math.random() * 3 + "s";
+          tree.style.animationDuration = (Math.random() * 4 + 8) + "s";
+          
+          document.body.appendChild(tree);
+
+          setTimeout(() => {
+            if (tree.parentNode) tree.remove();
+          }, 12000);
+        }
+
+        // Efecto de explosión al hacer clic en Santa
         function createClickExplosion(x, y) {
           const explosion = document.createElement("div");
           explosion.classList.add("click-explosion");
           explosion.style.left = x + "px";
           explosion.style.top = y + "px";
           explosion.style.fontSize = "3rem";
-          explosion.textContent = thanksgivingElements.harvestEmojis[Math.floor(Math.random() * thanksgivingElements.harvestEmojis.length)];
+          explosion.textContent = christmasElements.treeEmojis[Math.floor(Math.random() * christmasElements.treeEmojis.length)];
           document.body.appendChild(explosion);
 
           setTimeout(() => {
@@ -1411,23 +1507,24 @@
 
         // Crear múltiples explosiones para efecto más dramático
         function createMultipleExplosions(centerX, centerY) {
-          const numExplosions = 5;
+          const numExplosions = 8;
           for (let i = 0; i < numExplosions; i++) {
             setTimeout(() => {
-              const offsetX = (Math.random() - 0.5) * 200;
-              const offsetY = (Math.random() - 0.5) * 200;
+              const offsetX = (Math.random() - 0.5) * 300;
+              const offsetY = (Math.random() - 0.5) * 300;
               createClickExplosion(centerX + offsetX, centerY + offsetY);
             }, i * 100);
           }
         }
 
-        // Función para crear ráfaga de elementos
+        // Función para crear ráfaga de elementos navideños
         function createElementBurst() {
-          for (let i = 0; i < 6; i++) {
+          for (let i = 0; i < 10; i++) {
             setTimeout(() => {
-              createTurkey();
-              if (i % 2 === 0) createFarmer();
-              if (i % 3 === 0) createAutumnParticle();
+              createSnowflake();
+              if (i % 2 === 0) createBigSnowflake();
+              if (i % 3 === 0) createChristmasParticle();
+              if (i === 5) createSanta();
             }, i * 150);
           }
         }
@@ -1440,76 +1537,83 @@
           }, 600);
         }
 
-        // Verificar modo otoñal
-        function checkThanksgivingTime() {
+        // Verificar modo navideño
+        function checkChristmasTime() {
           const hour = new Date().getHours();
-          const isAutumnTime = hour >= 6 && hour <= 18;
+          const isChristmasTime = hour >= 18 || hour <= 7;
           
-          if (isAutumnTime) {
-            // Modo otoñal cálido
-            document.body.style.filter = 'sepia(0.2) saturate(1.1) hue-rotate(20deg)';
+          if (isChristmasTime) {
+            // Modo navideño nocturno más intenso
+            document.body.style.filter = 'brightness(1.1) saturate(1.2)';
             
-            // Más elementos durante el día
-            const dayTurkeyInterval = setInterval(createTurkey, 2200);
-            const dayFarmerInterval = setInterval(createFarmer, 6000);
-            const dayParticleInterval = setInterval(createAutumnParticle, 3000);
+            // Más elementos durante la noche
+            const nightSnowInterval = setInterval(createSnowflake, 800);
+            const nightBigSnowInterval = setInterval(createBigSnowflake, 3000);
+            const nightParticleInterval = setInterval(createChristmasParticle, 2000);
             
-            // Guardar intervalos diurnos
-            if (!window.thanksgivingIntervals) window.thanksgivingIntervals = {};
-            window.thanksgivingIntervals.dayTurkeys = dayTurkeyInterval;
-            window.thanksgivingIntervals.dayFarmers = dayFarmerInterval;
-            window.thanksgivingIntervals.dayParticles = dayParticleInterval;
+            // Guardar intervalos nocturnos
+            if (!window.christmasIntervals) window.christmasIntervals = {};
+            window.christmasIntervals.nightSnow = nightSnowInterval;
+            window.christmasIntervals.nightBigSnow = nightBigSnowInterval;
+            window.christmasIntervals.nightParticles = nightParticleInterval;
             
-            console.log("🌞 Modo Otoñal Activado - ¡Tiempo de Cosecha! 👨‍🌾");
+            console.log("🌙 Modo Navideño Nocturno Activado - ¡Nieve Intensa!");
           }
           
-          return isAutumnTime;
+          return isChristmasTime;
         }
 
-        // Inicializar Acción de Gracias cuando el DOM esté listo
-        function initThanksgiving() {
-          console.log("🦃 Inicializando Modo Acción de Gracias... 👨‍🌾");
+        // Inicializar Navidad cuando el DOM esté listo
+        function initChristmas() {
+          console.log("🎅 Inicializando Modo Navideño... 🎄");
           
-          // Verificar si es tiempo otoñal
-          const isAutumnMode = checkThanksgivingTime();
+          // Verificar si es tiempo navideño
+          const isNightMode = checkChristmasTime();
           
           // Intervalos principales
-          const turkeyInterval = setInterval(createTurkey, 3500);
-          const farmerInterval = setInterval(createFarmer, 9000);
-          const leafInterval = setInterval(createAutumnLeaf, 2500);
-          const particleInterval = setInterval(createAutumnParticle, 4500);
+          const snowflakeInterval = setInterval(createSnowflake, 1500);
+          const bigSnowflakeInterval = setInterval(createBigSnowflake, 5000);
+          const santaInterval = setInterval(createSanta, 12000);
+          const reindeerInterval = setInterval(createReindeer, 18000);
+          const particleInterval = setInterval(createChristmasParticle, 3000);
           
           // Crear algunos elementos iniciales
           setTimeout(() => {
-            createTurkey();
-            createAutumnLeaf();
+            for (let i = 0; i < 10; i++) {
+              setTimeout(createSnowflake, i * 100);
+            }
           }, 1000);
           
           setTimeout(() => {
-            createFarmer();
-            createAutumnParticle();
+            createBigSnowflake();
+            createFloatingTree();
           }, 3000);
           
+          setTimeout(() => {
+            createSanta();
+          }, 5000);
+          
           // Guardar intervalos para poder limpiarlos después
-          window.thanksgivingIntervals = {
-            turkeys: turkeyInterval,
-            farmers: farmerInterval,
-            autumnLeaves: leafInterval,
+          window.christmasIntervals = {
+            snowflakes: snowflakeInterval,
+            bigSnowflakes: bigSnowflakeInterval,
+            santas: santaInterval,
+            reindeers: reindeerInterval,
             particles: particleInterval
           };
-
-          // Configurar efectos del pavo principal
-          const mainTurkey = document.getElementById('mainTurkey');
-          const autumnWave = document.getElementById('autumnWave');
           
-          if (mainTurkey) {
-            mainTurkey.addEventListener('click', function(e) {
-              // Efecto visual otoñal
-              if (autumnWave) {
-                autumnWave.style.opacity = '1';
+          // Configurar efectos del Santa principal
+          const mainSanta = document.getElementById('mainSanta');
+          const christmasWave = document.getElementById('christmasWave');
+          
+          if (mainSanta) {
+            mainSanta.addEventListener('click', function(e) {
+              // Efecto visual navideño
+              if (christmasWave) {
+                christmasWave.style.opacity = '1';
                 setTimeout(() => {
-                  autumnWave.style.opacity = '0';
-                }, 1000);
+                  christmasWave.style.opacity = '0';
+                }, 1500);
               }
 
               // Crear explosión en el punto de click
@@ -1532,27 +1636,29 @@
               if (this.clickCount % 5 === 0) {
                 // Super explosión cada 5 clicks
                 setTimeout(() => {
-                  for (let i = 0; i < 10; i++) {
+                  for (let i = 0; i < 15; i++) {
                     setTimeout(() => {
-                      createTurkey();
-                      createAutumnParticle();
-                    }, i * 100);
+                      createSnowflake();
+                      createBigSnowflake();
+                      createChristmasParticle();
+                    }, i * 80);
                   }
-                }, 300);
+                }, 500);
               }
             });
             
             // Efecto de hover
-            mainTurkey.addEventListener('mouseenter', function() {
-              createAutumnParticle();
+            mainSanta.addEventListener('mouseenter', function() {
+              createChristmasParticle();
+              createSnowflake();
             });
           }
 
-          console.log("🦃 ¡Thanksgiving Mode Completamente Activado! 🥧");
-          console.log("👨‍🌾 Haz clic en el pavo para efectos especiales!");
+          console.log("🎅 ¡Christmas Mode Completamente Activado! ❄️");
+          console.log("🎄 Haz clic en Santa para efectos especiales!");
           
-          if (isAutumnMode) {
-            console.log("🍂 ¡Modo Otoñal Detectado - Efectos Extra Cálidos! 🌽");
+          if (isNightMode) {
+            console.log("🌙 ¡Modo Nocturno Detectado - Efectos Extra de Nieve! ⭐");
           }
         }
 
@@ -1561,7 +1667,7 @@
           // Limpiar elementos cuando la página no está visible
           document.addEventListener('visibilitychange', function() {
             if (document.hidden) {
-              const elements = document.querySelectorAll('.turkey, .farmer, .falling-leaf, .autumn-particle, .click-explosion');
+              const elements = document.querySelectorAll('.snowflake, .big-snowflake, .santa, .reindeer, .floating-tree, .christmas-particle, .click-explosion');
               elements.forEach(el => {
                 if (el.parentNode) el.remove();
               });
@@ -1574,14 +1680,14 @@
           });
         }
 
-        // Inicializar Acción de Gracias y optimizaciones
+        // Inicializar Navidad y optimizaciones
         if (document.readyState === 'loading') {
           document.addEventListener('DOMContentLoaded', function() {
-            initThanksgiving();
+            initChristmas();
             optimizePerformance();
           });
         } else {
-          initThanksgiving();
+          initChristmas();
           optimizePerformance();
         }
     
