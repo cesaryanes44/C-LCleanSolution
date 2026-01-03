@@ -29,15 +29,18 @@
 
         /* Header */
         header {
-            background: rgba(26, 77, 10, 0.9); /* Verde base con transparencia */
-            backdrop-filter: blur(10px); /* Efecto de cristal esmerilado */
-            -webkit-backdrop-filter: blur(10px);
+            background: rgba(26, 77, 10, 0.7) !important; /* Verde base con transparencia */
+            backdrop-filter: blur(15px) !important; /* Efecto de cristal esmerilado */
+            -webkit-backdrop-filter: blur(15px) !important;
             color: white;
-            padding: 0.5rem 0; /* Un poco más delgada para mayor elegancia */
+            padding: 15px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            border-bottom: 2px solid #ffd700; /* Línea dorada */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
             /* Línea dorada sutil en la parte inferior para dar clase */
             border-bottom: 2px solid #ffd700; 
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
@@ -1548,13 +1551,15 @@ nav ul li a[href="#contacto"]:hover {
 
         // Cambio de apariencia del header al hacer scroll
         window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.background = 'rgba(26, 77, 10, 0.95)';
-                header.style.padding = '0.2rem 0'; // Se hace más pequeña al bajar
-            } else {
-                header.style.background = 'rgba(26, 77, 10, 0.85)';
-                header.style.padding = '0.5rem 0';
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        // Al bajar, se mantiene transparente pero un poco más oscuro
+        header.style.background = 'rgba(26, 77, 10, 0.85)';
+        header.style.padding = '8px 0';
+    } else {
+        // Al estar arriba, es bien transparente
+        header.style.background = 'rgba(26, 77, 10, 0.7)';
+        header.style.padding = '15px 0';
             }
         });
 
