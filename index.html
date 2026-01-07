@@ -29,28 +29,25 @@
 
         /* Header */
         header {
-            background: rgba(26, 77, 10, 0.7) !important; /* Verde base con transparencia */
-            backdrop-filter: blur(15px) !important; /* Efecto de cristal esmerilado */
+            background: rgba(255, 255, 255, 0.95) !important; /* Color blanco con transparencia */
+            backdrop-filter: blur(15px) !important;
             -webkit-backdrop-filter: blur(15px) !important;
-            color: white;
+            color: #333;
             padding: 15px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 2px solid #ffd700; /* Línea dorada */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-bottom: 2px solid #3b82f6; /* Línea azul */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: all 0.4s ease;
-            /* Línea dorada sutil en la parte inferior para dar clase */
-            border-bottom: 2px solid #ffd700; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px; /* Centra el contenido en pantallas grandes */
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0.5rem 2rem;
             position: relative;
@@ -69,7 +66,7 @@
             display: block;
             width: 25px;
             height: 3px;
-            background: white;
+            background: #3b82f6;
             margin: 5px 0;
             transition: all 0.3s ease;
             border-radius: 3px;
@@ -127,40 +124,39 @@
         }
 
         nav ul li a:hover {
-            background: rgba(255, 215, 0, 0.2); /* Fondo dorado muy suave */
-            color: #ffd700;
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
             transform: translateY(-2px);
         }
 
         /* Efecto hover para links normales (Home, Services, etc.) */
 nav ul li a:not([href="#contacto"]):hover {
-    background: rgba(255, 215, 0, 0.15); /* Fondo dorado muy suave */
-    color: #ffd700;
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
 }
 
 /* TRANSFORMACIÓN: El link de Contacto ahora es un Botón Principal */
 nav ul li a[href="#contacto"] {
-    background: #dc2626 !important; /* Rojo profesional */
+    background: #3b82f6 !important;
     color: white !important;
     padding: 10px 22px !important;
-    border-radius: 50px !important; /* Bordes más redondeados */
+    border-radius: 50px !important;
     font-weight: bold !important;
-    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.4);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
     margin-left: 10px;
 }
 
 /* Efecto al pasar el mouse sobre el botón de contacto */
 nav ul li a[href="#contacto"]:hover {
-    background: white !important;
-    color: #dc2626 !important;
+    background: #2563eb !important;
+    color: white !important;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.5);
 }
 
-        /* Language Toggle Button */
         .language-toggle {
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(59, 130, 246, 0.1);
+            border: 2px solid rgba(59, 130, 246, 0.3);
             border-radius: 25px;
             padding: 8px 15px;
             cursor: pointer;
@@ -169,13 +165,13 @@ nav ul li a[href="#contacto"]:hover {
             align-items: center;
             gap: 8px;
             font-size: 0.9rem;
-            color: white;
+            color: #3b82f6;
             font-weight: bold;
         }
 
         .language-toggle:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.5);
+            background: rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.5);
             transform: translateY(-2px);
         }
 
@@ -185,7 +181,7 @@ nav ul li a[href="#contacto"]:hover {
 
         /* Hero Section with Cleaning Person */
         .hero {
-          background: linear-gradient(135deg, rgba(45, 80, 22, 0.6) 0%, rgba(26, 77, 10, 0.6) 100%), 
+          background: linear-gradient(135deg, rgba(59, 130, 246, 0.6) 0%, rgba(37, 99, 235, 0.6) 100%), 
                       url("img/hero-cleaning.png") no-repeat center center/cover;
           background-attachment: scroll;
           height: 100vh;
@@ -198,13 +194,12 @@ nav ul li a[href="#contacto"]:hover {
           overflow: hidden;
           width: 100%;
           min-width: 100%;
-          background-color: #2d5016;
+          background-color: #3b82f6;
         }
 
-        /* Fix específico para móviles */
         @media (max-width: 768px) {
           .hero {
-            background-image: linear-gradient(135deg, rgba(45, 80, 22, 0.6) 0%, rgba(26, 77, 10, 0.6) 100%), 
+            background-image: linear-gradient(135deg, rgba(59, 130, 246, 0.6) 0%, rgba(37, 99, 235, 0.6) 100%), 
                              url("img/hero-cleaning.png") !important;
             background-attachment: scroll !important;
             background-repeat: no-repeat !important;
@@ -292,7 +287,7 @@ nav ul li a[href="#contacto"]:hover {
 
         .cta-button {
             display: inline-block;
-            background: #dc2626;
+            background: #3b82f6;
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -303,9 +298,9 @@ nav ul li a[href="#contacto"]:hover {
         }
 
         .cta-button:hover {
-            background: #b91c1c;
+            background: #2563eb;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.4);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
         }
 
         /* Sections */
@@ -319,7 +314,7 @@ nav ul li a[href="#contacto"]:hover {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: #2d5016;
+            color: #3b82f6;
         }
 
         /* Services */
@@ -343,7 +338,7 @@ nav ul li a[href="#contacto"]:hover {
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
             transition: transform 0.3s;
-            border: 2px solid #dc2626;
+            border: 2px solid #3b82f6;
         }
 
         .service-card:hover {
@@ -358,7 +353,7 @@ nav ul li a[href="#contacto"]:hover {
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #dc2626;
+            color: #3b82f6;
         }
 
         /* About */
@@ -391,8 +386,9 @@ nav ul li a[href="#contacto"]:hover {
         }
 
         .about-features li::before {
-            content: "🎄";
+            content: "✓";
             margin-right: 10px;
+            color: #3b82f6;
         }
 
         /* Contact */
@@ -414,7 +410,7 @@ nav ul li a[href="#contacto"]:hover {
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 2px solid #dc2626;
+            border: 2px solid #3b82f6;
         }
 
         .contact-item {
@@ -426,7 +422,7 @@ nav ul li a[href="#contacto"]:hover {
 
         .contact-item i {
             margin-right: 15px;
-            color: #dc2626;
+            color: #3b82f6;
             width: 20px;
         }
 
@@ -435,7 +431,7 @@ nav ul li a[href="#contacto"]:hover {
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 2px solid #dc2626;
+            border: 2px solid #3b82f6;
         }
 
         .form-group {
@@ -463,7 +459,7 @@ nav ul li a[href="#contacto"]:hover {
         }
 
         .submit-btn {
-            background: #dc2626;
+            background: #3b82f6;
             color: white;
             padding: 12px 30px;
             border: none;
@@ -502,7 +498,7 @@ nav ul li a[href="#contacto"]:hover {
 
         /* Footer */
         footer {
-            background: #2d5016;
+            background: #3b82f6;
             color: white;
             text-align: center;
             padding: 2rem;
@@ -545,14 +541,14 @@ nav ul li a[href="#contacto"]:hover {
                 right: -100%;
                 width: 70%;
                 height: 100vh;
-                background: linear-gradient(135deg, #2d5016 0%, #1a4d0a 100%);
+                background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
                 flex-direction: column;
                 justify-content: flex-start;
                 padding-top: 80px;
                 padding-bottom: 2rem;
                 transition: right 0.4s ease;
                 z-index: 999;
-                box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+                box-shadow: -5px 0 20px rgba(0,0,0,0.2);
             }
 
             .nav-content.active {
@@ -582,7 +578,7 @@ nav ul li a[href="#contacto"]:hover {
 
             .nav-content ul li a:hover {
                 background: rgba(255,255,255,0.1);
-                color: #ffd700;
+                color: #3b82f6;
             }
 
             .language-toggle {
@@ -695,418 +691,9 @@ nav ul li a[href="#contacto"]:hover {
             overflow-wrap: break-word;
         }
 
-        /* ===== DECORACIONES DE NAVIDAD ❄️🎄🎅 ===== */
-
-        /* Overlay de Navidad para toda la página */
-        .christmas-overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          pointer-events: none;
-          z-index: 1000;
-          overflow: hidden;
-        }
-
-        /* Copos de nieve cayendo */
-        .snowflake {
-          position: fixed;
-          top: -10px;
-          color: white;
-          font-size: 1rem;
-          animation: snowFall linear infinite;
-          z-index: 1001;
-          pointer-events: none;
-          text-shadow: 0 0 10px rgba(255,255,255,0.8);
-        }
-
-        @keyframes snowFall {
-          0% {
-            transform: translateY(-100vh) rotate(0deg);
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(100vh) rotate(360deg);
-            opacity: 0;
-          }
-        }
-
-        /* Copos de nieve más grandes */
-        .big-snowflake {
-          position: fixed;
-          top: -20px;
-          color: rgba(255,255,255,0.9);
-          font-size: 1.5rem;
-          animation: bigSnowFall linear infinite;
-          z-index: 1001;
-          pointer-events: none;
-          text-shadow: 0 0 15px rgba(255,255,255,1);
-        }
-
-        @keyframes bigSnowFall {
-          0% {
-            transform: translateY(-100vh) translateX(0) rotate(0deg);
-            opacity: 0.9;
-          }
-          25% {
-            transform: translateY(25vh) translateX(50px) rotate(90deg);
-            opacity: 1;
-          }
-          50% {
-            transform: translateY(50vh) translateX(-30px) rotate(180deg);
-            opacity: 0.8;
-          }
-          75% {
-            transform: translateY(75vh) translateX(40px) rotate(270deg);
-            opacity: 0.9;
-          }
-          100% {
-            transform: translateY(100vh) translateX(0) rotate(360deg);
-            opacity: 0;
-          }
-        }
-
-        /* Santa Claus volando */
-        .santa {
-          position: fixed;
-          top: -100px;
-          font-size: 3rem;
-          animation: flySanta 15s linear infinite;
-          z-index: 9999;
-          pointer-events: none;
-          filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.7));
-        }
-
-        @keyframes flySanta {
-          0% { 
-            transform: translateX(-10vw) translateY(0) rotate(0deg); 
-            opacity: 0; 
-          }
-          10% { opacity: 1; }
-          20% { 
-            transform: translateX(20vw) translateY(-50px) rotate(-10deg); 
-          }
-          40% { 
-            transform: translateX(40vw) translateY(-30px) rotate(10deg); 
-          }
-          60% { 
-            transform: translateX(60vw) translateY(-60px) rotate(-5deg); 
-          }
-          80% { 
-            transform: translateX(80vw) translateY(-40px) rotate(5deg); 
-          }
-          90% { opacity: 1; }
-          100% { 
-            transform: translateX(110vw) translateY(-50px) rotate(0deg); 
-            opacity: 0; 
-          }
-        }
-
-        /* Renos voladores */
-        .reindeer {
-          position: fixed;
-          top: -100px;
-          font-size: 2.5rem;
-          animation: flyReindeer 18s linear infinite;
-          z-index: 9998;
-          pointer-events: none;
-          filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.6));
-        }
-
-        @keyframes flyReindeer {
-          0% { 
-            transform: translateX(110vw) translateY(0) rotate(0deg); 
-            opacity: 0; 
-          }
-          10% { opacity: 1; }
-          30% { 
-            transform: translateX(80vw) translateY(-40px) rotate(15deg); 
-          }
-          50% { 
-            transform: translateX(50vw) translateY(-60px) rotate(-10deg); 
-          }
-          70% { 
-            transform: translateX(20vw) translateY(-30px) rotate(10deg); 
-          }
-          90% { opacity: 1; }
-          100% { 
-            transform: translateX(-10vw) translateY(-50px) rotate(0deg); 
-            opacity: 0; 
-          }
-        }
-
-        /* Árboles de Navidad flotantes */
-        .floating-tree {
-          position: fixed;
-          font-size: 2rem;
-          color: rgba(34, 197, 94, 0.8);
-          animation: floatTree 10s ease-in-out infinite;
-          z-index: 1001;
-          pointer-events: none;
-          filter: drop-shadow(0 0 10px rgba(34,197,94,0.5));
-        }
-
-        @keyframes floatTree {
-          0%, 100% { 
-            transform: translateY(0) rotate(-3deg);
-            opacity: 0.7;
-          }
-          25% { 
-            transform: translateY(-20px) rotate(3deg);
-            opacity: 1;
-          }
-          50% { 
-            transform: translateY(-15px) rotate(-2deg);
-            opacity: 0.9;
-          }
-          75% { 
-            transform: translateY(-25px) rotate(2deg);
-            opacity: 1;
-          }
-        }
-
-        /* Regalos en las esquinas */
-        .gift {
-          position: fixed;
-          font-size: 3rem;
-          color: rgba(220, 38, 38, 0.4);
-          z-index: 998;
-          pointer-events: none;
-          animation: giftGlow 3s ease-in-out infinite alternate;
-        }
-
-        .gift.top-left {
-          top: 20px;
-          left: 20px;
-          transform: rotate(-10deg);
-        }
-
-        .gift.top-right {
-          top: 20px;
-          right: 20px;
-          transform: rotate(10deg);
-        }
-
-        .gift.bottom-left {
-          bottom: 20px;
-          left: 20px;
-          transform: rotate(5deg);
-        }
-
-        .gift.bottom-right {
-          bottom: 20px;
-          right: 20px;
-          transform: rotate(-5deg);
-        }
-
-        @keyframes giftGlow {
-          from { text-shadow: 0 0 5px rgba(220,38,38,0.4); }
-          to { text-shadow: 0 0 15px rgba(220,38,38,0.8); }
-        }
-
-        /* Santa principal interactivo */
-        .main-santa {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          font-size: 4rem;
-          cursor: pointer;
-          z-index: 9999;
-          animation: santaGlow 2s ease-in-out infinite alternate;
-          transition: transform 0.3s ease;
-        }
-
-        .main-santa:hover {
-          transform: scale(1.2) rotate(15deg);
-        }
-
-        @keyframes santaGlow {
-          from { 
-            text-shadow: 0 0 5px #dc2626, 0 0 10px #dc2626; 
-            filter: brightness(1);
-          }
-          to { 
-            text-shadow: 0 0 20px #dc2626, 0 0 30px #dc2626, 0 0 40px #b91c1c; 
-            filter: brightness(1.3);
-          }
-        }
-
-        /* Pequeños elementos navideños decorativos */
-        .mini-christmas {
-          position: fixed;
-          font-size: 1.5rem;
-          z-index: 997;
-          pointer-events: none;
-          animation: christmasGlow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes christmasGlow {
-          from { opacity: 0.7; }
-          to { opacity: 1; }
-        }
-
-        /* Efecto de partículas navideñas */
-        .christmas-particle {
-          position: fixed;
-          width: 4px;
-          height: 4px;
-          background: #ffd700;
-          border-radius: 50%;
-          pointer-events: none;
-          z-index: 1002;
-          animation: particle 8s linear infinite;
-        }
-
-        @keyframes particle {
-          0% {
-            opacity: 0;
-            transform: translateY(100vh) scale(0);
-          }
-          10% {
-            opacity: 1;
-            transform: translateY(90vh) scale(1);
-          }
-          90% {
-            opacity: 1;
-            transform: translateY(10vh) scale(1);
-          }
-          100% {
-            opacity: 0;
-            transform: translateY(0) scale(0);
-          }
-        }
-
-        /* Efectos visuales navideños */
-        .christmas-wave {
-          position: fixed;
-          bottom: 80px;
-          right: 20px;
-          font-size: 2rem;
-          z-index: 9998;
-          animation: christmasPulse 1.5s ease-in-out infinite;
-          opacity: 0;
-        }
-
-        @keyframes christmasPulse {
-          0%, 100% { transform: scale(1); opacity: 0; }
-          50% { transform: scale(1.5); opacity: 1; }
-        }
-
-        /* Estrella de Belén */
-        .star {
-          position: fixed;
-          top: 50px;
-          left: 100px;
-          font-size: 3rem;
-          z-index: 996;
-          pointer-events: none;
-          animation: starTwinkle 3s linear infinite;
-        }
-
-        @keyframes starTwinkle {
-          0%, 100% { opacity: 0.7; transform: rotate(0deg) scale(1); }
-          50% { opacity: 1; transform: rotate(180deg) scale(1.2); }
-        }
-
-        /* Efecto de click en Santa */
-        .click-explosion {
-          position: fixed;
-          pointer-events: none;
-          z-index: 10000;
-          animation: explode 1s ease-out;
-        }
-
-        @keyframes explode {
-          0% {
-            transform: scale(0) rotate(0deg);
-            opacity: 1;
-          }
-          100% {
-            transform: scale(3) rotate(360deg);
-            opacity: 0;
-          }
-        }
-
-        /* Animación de shake para efectos especiales */
-        @keyframes shake {
-          0%, 100% { transform: translateX(0); }
-          25% { transform: translateX(-2px); }
-          75% { transform: translateX(2px); }
-        }
-
-        /* Responsivo para móviles - Navidad */
-        @media (max-width: 768px) {
-          .santa, .reindeer { 
-            font-size: 2rem; 
-          }
-          
-          .main-santa { 
-            font-size: 3rem; 
-            bottom: 15px; 
-            right: 15px; 
-          }
-          
-          .gift { 
-            font-size: 2rem; 
-          }
-          
-          .star { 
-            font-size: 2rem; 
-            top: 20px; 
-            left: 20px; 
-          }
-          
-          .mini-christmas { 
-            font-size: 1rem; 
-          }
-          
-          .snowflake {
-            font-size: 0.8rem;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .main-santa { 
-            font-size: 2.5rem; 
-            bottom: 10px; 
-            right: 10px; 
-          }
-          
-          .gift { 
-            font-size: 1.5rem; 
-          }
-          
-          .star { 
-            font-size: 1.5rem; 
-            top: 15px; 
-            left: 15px; 
-          }
-        }
-
-        /* Efecto navideño en el fondo */
-        .christmas-sky {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(180deg, #0c1b3a 0%, #1e3a8a 50%, #3b82f6 100%);
-          opacity: 0.1;
-          z-index: -1;
-          pointer-events: none;
-        }
-
-        /* Modo oscuro navideño para navegadores compatibles */
-        @media (prefers-color-scheme: dark) {
-          body {
-            background: linear-gradient(135deg, #0c1b3a 0%, #1e3a8a 100%);
-            color: #f8fafc;
-          }
-        }
+        /* ===== FIN DEdecoraciones ===== */
 
         /* Seccion de Galeria */
-        /* Gallery Section con Brillo Navideño */
         .gallery {
            background: white;
            width: 100%;
@@ -1157,8 +744,8 @@ nav ul li a[href="#contacto"]:hover {
 
 .gallery-item:hover {
     transform: translateY(-5px);
-    border-color: #dc2626; /* Rojo Navidad */
-    box-shadow: 0 10px 20px rgba(220, 38, 38, 0.3);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
 }
 
 .gallery-item img {
@@ -1179,7 +766,7 @@ nav ul li a[href="#contacto"]:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(45, 80, 22, 0.9);
+    background: rgba(59, 130, 246, 0.9);
     color: white;
     padding: 12px;
     text-align: center;
@@ -1193,11 +780,9 @@ nav ul li a[href="#contacto"]:hover {
     transform: translateY(0);
 }
 
-    </style>
+</style>
 </head>
 <body>
-    <!-- Cielo navideño de fondo -->
-    <div class="christmas-sky"></div>
 
     <!-- Header -->
     <header>
@@ -1423,30 +1008,6 @@ nav ul li a[href="#contacto"]:hover {
         <p data-es="&copy; 2026 C&LCleaningSolution. Todos los derechos reservados. | Servicios de limpieza profesional para casas y oficinas" data-en="&copy; 2026 C&LCleaningSolution. All rights reserved. | Professional cleaning services for homes and offices">&copy; 2026 C&LCleaningSolution. All rights reserved. | Professional cleaning services for homes and offices</p>
     </footer>
 
-    <!-- ===== DECORACIONES DE NAVIDAD ===== -->
-    <div class="christmas-overlay"></div>
-    
-    <!-- Regalos en las esquinas -->
-    <div class="gift top-left">🎁</div>
-    <div class="gift top-right">🎁</div>
-    <div class="gift bottom-left">🎁</div>
-    <div class="gift bottom-right">🎁</div>
-    
-    <!-- Estrella de Belén -->
-    <div class="star">⭐</div>
-    
-    <!-- Elementos navideños decorativos -->
-    <div class="mini-christmas" style="top: 60%; left: 5%;">🎄</div>
-    <div class="mini-christmas" style="top: 30%; right: 8%;">🎅</div>
-    <div class="mini-christmas" style="bottom: 40%; left: 10%;">🔔</div>
-    <div class="mini-christmas" style="top: 20%; left: 70%;">❄️</div>
-    
-    <!-- Santa principal interactivo -->
-    <div class="main-santa" id="mainSanta">🎅</div>
-    
-    <!-- Indicador de música navideña -->
-    <div class="christmas-wave" id="christmasWave">🎵</div>
-
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         let currentLang = 'en';
@@ -1554,382 +1115,16 @@ nav ul li a[href="#contacto"]:hover {
     const header = document.querySelector('header');
     if (window.scrollY > 50) {
         // Al bajar, se mantiene transparente pero un poco más oscuro
-        header.style.background = 'rgba(26, 77, 10, 0.85)';
+        header.style.background = 'rgba(59, 130, 246, 0.95)';
         header.style.padding = '8px 0';
     } else {
         // Al estar arriba, es bien transparente
-        header.style.background = 'rgba(26, 77, 10, 0.7)';
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
         header.style.padding = '15px 0';
             }
         });
-
-        // ===== JAVASCRIPT DE NAVIDAD ❄️🎄🎅 =====
-
-        // Configuración de elementos navideños
-        const christmasElements = {
-          santas: ['🎅', '🎅', '🎄'],
-          reindeers: ['🦌', '🦌', '🦌'],
-          snowflakes: ['❄️', '⭐', '💫'],
-          treeEmojis: ['🎄', '🎁', '🔔', '⭐', '🕯️', '🎅', '🦌', '🎂', '🍭', '🌟']
-        };
-
-        // Contadores para control de rendimiento
-        let activeElements = {
-          snowflakes: 0,
-          bigSnowflakes: 0,
-          santas: 0,
-          reindeers: 0,
-          particles: 0
-        };
-
-        const MAX_ELEMENTS = {
-          snowflakes: 50,
-          bigSnowflakes: 15,
-          santas: 3,
-          reindeers: 2,
-          particles: 20
-        };
-
-        // Crear copos de nieve
-        function createSnowflake() {
-          if (activeElements.snowflakes >= MAX_ELEMENTS.snowflakes) return;
-          
-          const snowflake = document.createElement("div");
-          snowflake.classList.add("snowflake");
-          snowflake.textContent = christmasElements.snowflakes[Math.floor(Math.random() * christmasElements.snowflakes.length)];
-          snowflake.style.left = Math.random() * window.innerWidth + "px";
-          snowflake.style.animationDelay = Math.random() * 3 + "s";
-          
-          // Variación en la duración de la animación
-          snowflake.style.animationDuration = (Math.random() * 5 + 8) + "s";
-          
-          document.body.appendChild(snowflake);
-          activeElements.snowflakes++;
-
-          setTimeout(() => {
-            if (snowflake.parentNode) {
-              snowflake.remove();
-              activeElements.snowflakes--;
-            }
-          }, 13000);
-        }
-
-        // Crear copos de nieve grandes
-        function createBigSnowflake() {
-          if (activeElements.bigSnowflakes >= MAX_ELEMENTS.bigSnowflakes) return;
-          
-          const bigSnowflake = document.createElement("div");
-          bigSnowflake.classList.add("big-snowflake");
-          bigSnowflake.textContent = '❄️';
-          bigSnowflake.style.left = Math.random() * window.innerWidth + "px";
-          bigSnowflake.style.animationDelay = Math.random() * 2 + "s";
-          bigSnowflake.style.animationDuration = (Math.random() * 3 + 12) + "s";
-          
-          document.body.appendChild(bigSnowflake);
-          activeElements.bigSnowflakes++;
-
-          setTimeout(() => {
-            if (bigSnowflake.parentNode) {
-              bigSnowflake.remove();
-              activeElements.bigSnowflakes--;
-            }
-          }, 15000);
-        }
-
-        // Crear Santa Claus volando
-        function createSanta() {
-          if (activeElements.santas >= MAX_ELEMENTS.santas) return;
-          
-          const santa = document.createElement("div");
-          santa.classList.add("santa");
-          santa.textContent = christmasElements.santas[Math.floor(Math.random() * christmasElements.santas.length)];
-          santa.style.left = Math.random() * window.innerWidth + "px";
-          santa.style.animationDelay = Math.random() * 5 + "s";
-          
-          // Variación en la duración de la animación
-          santa.style.animationDuration = (Math.random() * 5 + 12) + "s";
-          
-          document.body.appendChild(santa);
-          activeElements.santas++;
-
-          setTimeout(() => {
-            if (santa.parentNode) {
-              santa.remove();
-              activeElements.santas--;
-            }
-          }, 17000);
-        }
-
-        // Crear renos voladores
-        function createReindeer() {
-          if (activeElements.reindeers >= MAX_ELEMENTS.reindeers) return;
-          
-          const reindeer = document.createElement("div");
-          reindeer.classList.add("reindeer");
-          reindeer.textContent = christmasElements.reindeers[Math.floor(Math.random() * christmasElements.reindeers.length)];
-          reindeer.style.left = Math.random() * window.innerWidth + "px";
-          reindeer.style.animationDelay = Math.random() * 4 + "s";
-          reindeer.style.animationDuration = (Math.random() * 6 + 15) + "s";
-          
-          document.body.appendChild(reindeer);
-          activeElements.reindeers++;
-
-          setTimeout(() => {
-            if (reindeer.parentNode) {
-              reindeer.remove();
-              activeElements.reindeers--;
-            }
-          }, 21000);
-        }
-
-        // Crear partículas navideñas
-        function createChristmasParticle() {
-          if (activeElements.particles >= MAX_ELEMENTS.particles) return;
-          
-          const particle = document.createElement("div");
-          particle.classList.add("christmas-particle");
-          particle.style.left = Math.random() * window.innerWidth + "px";
-          particle.style.animationDelay = Math.random() * 2 + "s";
-          
-          // Colores dorados aleatorios
-          const colors = ['#ffd700', '#ffeb3b', '#ffc107', '#fff176', '#ffec64'];
-          particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-          
-          // Tamaño aleatorio
-          const size = Math.random() * 3 + 2;
-          particle.style.width = size + "px";
-          particle.style.height = size + "px";
-          
-          document.body.appendChild(particle);
-          activeElements.particles++;
-
-          setTimeout(() => {
-            if (particle.parentNode) {
-              particle.remove();
-              activeElements.particles--;
-            }
-          }, 8000);
-        }
-
-        // Crear árboles flotantes
-        function createFloatingTree() {
-          const tree = document.createElement("div");
-          tree.classList.add("floating-tree");
-          tree.textContent = '🎄';
-          tree.style.left = Math.random() * (window.innerWidth - 100) + "px";
-          tree.style.top = Math.random() * (window.innerHeight - 200) + 100 + "px";
-          tree.style.animationDelay = Math.random() * 3 + "s";
-          tree.style.animationDuration = (Math.random() * 4 + 8) + "s";
-          
-          document.body.appendChild(tree);
-
-          setTimeout(() => {
-            if (tree.parentNode) tree.remove();
-          }, 12000);
-        }
-
-        // Efecto de explosión al hacer clic en Santa
-        function createClickExplosion(x, y) {
-          const explosion = document.createElement("div");
-          explosion.classList.add("click-explosion");
-          explosion.style.left = x + "px";
-          explosion.style.top = y + "px";
-          explosion.style.fontSize = "3rem";
-          explosion.textContent = christmasElements.treeEmojis[Math.floor(Math.random() * christmasElements.treeEmojis.length)];
-          document.body.appendChild(explosion);
-
-          setTimeout(() => {
-            if (explosion.parentNode) explosion.remove();
-          }, 1000);
-        }
-
-        // Crear múltiples explosiones para efecto más dramático
-        function createMultipleExplosions(centerX, centerY) {
-          const numExplosions = 8;
-          for (let i = 0; i < numExplosions; i++) {
-            setTimeout(() => {
-              const offsetX = (Math.random() - 0.5) * 300;
-              const offsetY = (Math.random() - 0.5) * 300;
-              createClickExplosion(centerX + offsetX, centerY + offsetY);
-            }, i * 100);
-          }
-        }
-
-        // Función para crear ráfaga de elementos navideños
-        function createElementBurst() {
-          for (let i = 0; i < 10; i++) {
-            setTimeout(() => {
-              createSnowflake();
-              if (i % 2 === 0) createBigSnowflake();
-              if (i % 3 === 0) createChristmasParticle();
-              if (i === 5) createSanta();
-            }, i * 150);
-          }
-        }
-
-        // Efecto de shake en la página
-        function shakeScreen() {
-          document.body.style.animation = 'shake 0.6s ease-in-out';
-          setTimeout(() => {
-            document.body.style.animation = '';
-          }, 600);
-        }
-
-        // Verificar modo navideño
-        function checkChristmasTime() {
-          const hour = new Date().getHours();
-          const isChristmasTime = hour >= 18 || hour <= 7;
-          
-          if (isChristmasTime) {
-            // Modo navideño nocturno más intenso
-            document.body.style.filter = 'brightness(1.1) saturate(1.2)';
-            
-            // Más elementos durante la noche
-            const nightSnowInterval = setInterval(createSnowflake, 800);
-            const nightBigSnowInterval = setInterval(createBigSnowflake, 3000);
-            const nightParticleInterval = setInterval(createChristmasParticle, 2000);
-            
-            // Guardar intervalos nocturnos
-            if (!window.christmasIntervals) window.christmasIntervals = {};
-            window.christmasIntervals.nightSnow = nightSnowInterval;
-            window.christmasIntervals.nightBigSnow = nightBigSnowInterval;
-            window.christmasIntervals.nightParticles = nightParticleInterval;
-            
-            console.log("🌙 Modo Navideño Nocturno Activado - ¡Nieve Intensa!");
-          }
-          
-          return isChristmasTime;
-        }
-
-        // Inicializar Navidad cuando el DOM esté listo
-        function initChristmas() {
-          console.log("🎅 Inicializando Modo Navideño... 🎄");
-          
-          // Verificar si es tiempo navideño
-          const isNightMode = checkChristmasTime();
-          
-          // Intervalos principales
-          const snowflakeInterval = setInterval(createSnowflake, 1500);
-          const bigSnowflakeInterval = setInterval(createBigSnowflake, 5000);
-          const santaInterval = setInterval(createSanta, 12000);
-          const reindeerInterval = setInterval(createReindeer, 18000);
-          const particleInterval = setInterval(createChristmasParticle, 3000);
-          
-          // Crear algunos elementos iniciales
-          setTimeout(() => {
-            for (let i = 0; i < 10; i++) {
-              setTimeout(createSnowflake, i * 100);
-            }
-          }, 1000);
-          
-          setTimeout(() => {
-            createBigSnowflake();
-            createFloatingTree();
-          }, 3000);
-          
-          setTimeout(() => {
-            createSanta();
-          }, 5000);
-          
-          // Guardar intervalos para poder limpiarlos después
-          window.christmasIntervals = {
-            snowflakes: snowflakeInterval,
-            bigSnowflakes: bigSnowflakeInterval,
-            santas: santaInterval,
-            reindeers: reindeerInterval,
-            particles: particleInterval
-          };
-          
-          // Configurar efectos del Santa principal
-          const mainSanta = document.getElementById('mainSanta');
-          const christmasWave = document.getElementById('christmasWave');
-          
-          if (mainSanta) {
-            mainSanta.addEventListener('click', function(e) {
-              // Efecto visual navideño
-              if (christmasWave) {
-                christmasWave.style.opacity = '1';
-                setTimeout(() => {
-                  christmasWave.style.opacity = '0';
-                }, 1500);
-              }
-
-              // Crear explosión en el punto de click
-              const rect = this.getBoundingClientRect();
-              const centerX = rect.left + rect.width / 2;
-              const centerY = rect.top + rect.height / 2;
-              
-              createMultipleExplosions(centerX, centerY);
-
-              // Crear ráfaga de elementos
-              createElementBurst();
-
-              // Efecto de shake
-              shakeScreen();
-              
-              // Efecto especial cada 5 clicks
-              if (!this.clickCount) this.clickCount = 0;
-              this.clickCount++;
-              
-              if (this.clickCount % 5 === 0) {
-                // Super explosión cada 5 clicks
-                setTimeout(() => {
-                  for (let i = 0; i < 15; i++) {
-                    setTimeout(() => {
-                      createSnowflake();
-                      createBigSnowflake();
-                      createChristmasParticle();
-                    }, i * 80);
-                  }
-                }, 500);
-              }
-            });
-            
-            // Efecto de hover
-            mainSanta.addEventListener('mouseenter', function() {
-              createChristmasParticle();
-              createSnowflake();
-            });
-          }
-
-          console.log("🎅 ¡Christmas Mode Completamente Activado! ❄️");
-          console.log("🎄 Haz clic en Santa para efectos especiales!");
-          
-          if (isNightMode) {
-            console.log("🌙 ¡Modo Nocturno Detectado - Efectos Extra de Nieve! ⭐");
-          }
-        }
-
-        // Optimización de rendimiento
-        function optimizePerformance() {
-          // Limpiar elementos cuando la página no está visible
-          document.addEventListener('visibilitychange', function() {
-            if (document.hidden) {
-              const elements = document.querySelectorAll('.snowflake, .big-snowflake, .santa, .reindeer, .floating-tree, .christmas-particle, .click-explosion');
-              elements.forEach(el => {
-                if (el.parentNode) el.remove();
-              });
-              
-              // Resetear contadores
-              Object.keys(activeElements).forEach(key => {
-                activeElements[key] = 0;
-              });
-            }
-          });
-        }
-
-        // Inicializar Navidad y optimizaciones
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', function() {
-            initChristmas();
-            optimizePerformance();
-          });
-        } else {
-          initChristmas();
-          optimizePerformance();
-        }
     
-      // 🔄 Cambia el correo según el idioma del sitio
+      // Cambia el correo según el idioma del sitio
       document.addEventListener("DOMContentLoaded", () => {
     const emailLink = document.getElementById("emailLink");
 
