@@ -6,6 +6,11 @@
 
     <meta name="google-site-verification" content="U8gnLlvdr2YMPp5HdzBv_JMjO9qQdVqASSX122GtkqA" />
     
+    <!-- Google Fonts - Tipografía moderna y profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <title>C&L Cleaning Solution - Professional Cleaning Services for Homes and Offices</title>
     <!-- Icono en la pestana del navegador-->
     <link rel="icon" type="image/png" href="img/Logo%20C%26L.png">
@@ -29,12 +34,13 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #334155;
             width: 100%;
             min-width: 320px;
             overflow-x: hidden;
+            font-weight: 400;
         }
 
         /* Header */
@@ -112,37 +118,39 @@
         .nav-content {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         nav ul {
             display: flex;
             list-style: none;
+            gap: 0.5rem;
         }
 
         nav ul li {
-            margin-left: 2rem;
+            margin-left: 0;
         }
 
         nav ul li a {
-            color: #333;
+            color: #334155;
             text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 20px;
+            padding: 10px 18px;
+            border-radius: 25px;
             transition: all 0.3s ease;
             font-weight: 500;
+            font-size: 0.95rem;
         }
 
         nav ul li a:hover {
-            background: rgba(59, 130, 246, 0.1);
-            color: #3b82f6;
+            background: rgba(249, 115, 22, 0.1);
+            color: #f97316;
             transform: translateY(-2px);
         }
 
         /* Efecto hover para links normales (Home, Services, etc.) */
 nav ul li a:not([href="#contacto"]):hover {
-    background: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
+    background: rgba(249, 115, 22, 0.1);
+    color: #f97316;
 }
 
 /* TRANSFORMACIÓN: El link de Contacto ahora es un Botón Principal */
@@ -158,10 +166,10 @@ nav ul li a[href="#contacto"] {
 
 /* Efecto al pasar el mouse sobre el botón de contacto */
 nav ul li a[href="#contacto"]:hover {
-    background: #2563eb !important;
+    background: #f97316 !important;
     color: white !important;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.5);
+    box-shadow: 0 6px 15px rgba(249, 115, 22, 0.5);
 }
 
         .language-toggle {
@@ -283,39 +291,46 @@ nav ul li a[href="#contacto"]:hover {
 
         .hero-content h1 {
             font-size: 3.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             animation: fadeInUp 1s ease-out;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            font-weight: 700;
+            line-height: 1.2;
         }
 
         .hero-content p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: 1.35rem;
+            margin-bottom: 2.5rem;
             animation: fadeInUp 1s ease-out 0.3s both;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-button {
             display: inline-block;
             background: #3b82f6;
             color: white;
-            padding: 15px 30px;
+            padding: 16px 36px;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
             animation: fadeInUp 1s ease-out 0.6s both;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
         .cta-button:hover {
-            background: #2563eb;
+            background: #f97316;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);
         }
 
         /* Sections */
         section {
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             width: 100%;
             margin: 0 auto;
         }
@@ -323,8 +338,24 @@ nav ul li a[href="#contacto"]:hover {
         h2 {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             color: #3b82f6;
+            font-weight: 700;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #f97316);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-weight: 600;
         }
 
         /* Services */
@@ -343,27 +374,37 @@ nav ul li a[href="#contacto"]:hover {
 
         .service-card {
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             text-align: center;
-            transition: transform 0.3s;
-            border: 2px solid #3b82f6;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: #f97316;
         }
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.25rem;
+            display: block;
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
             color: #3b82f6;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         /* About */
@@ -376,14 +417,19 @@ nav ul li a[href="#contacto"]:hover {
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            margin-top: 2rem;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 3rem;
         }
 
         .about-text {
             font-size: 1.1rem;
             line-height: 1.8;
+            color: #475569;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
         }
 
         .about-features {
@@ -391,14 +437,24 @@ nav ul li a[href="#contacto"]:hover {
         }
 
         .about-features li {
-            padding: 0.5rem 0;
-            font-size: 1.1rem;
+            padding: 0.75rem 0;
+            font-size: 1.05rem;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+
+        .about-features li:hover {
+            transform: translateX(5px);
         }
 
         .about-features li::before {
             content: "✓";
-            margin-right: 10px;
-            color: #3b82f6;
+            margin-right: 12px;
+            color: #f97316;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         /* Contact */
@@ -412,36 +468,44 @@ nav ul li a[href="#contacto"]:hover {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
         .contact-info {
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 2px solid #3b82f6;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid #f97316;
+        }
+
+        .contact-info h3 {
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+            color: #475569;
         }
 
         .contact-item i {
             margin-right: 15px;
-            color: #3b82f6;
-            width: 20px;
+            color: #f97316;
+            width: 24px;
+            text-align: center;
         }
 
         .contact-form {
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 2px solid #3b82f6;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-right: 5px solid #3b82f6;
         }
 
         .form-group {
@@ -451,67 +515,88 @@ nav ul li a[href="#contacto"]:hover {
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            font-weight: bold;
+            font-weight: 500;
+            color: #334155;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            padding: 14px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
             font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
         }
 
         .form-group textarea {
-            height: 120px;
+            height: 140px;
             resize: vertical;
         }
 
         .submit-btn {
             background: #3b82f6;
             color: white;
-            padding: 12px 30px;
+            padding: 14px 32px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
             font-size: 1rem;
-            transition: background 0.3s;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: inherit;
         }
 
         .submit-btn:hover {
-            background: #2563eb;
+            background: #f97316;
         }
 
         .form-buttons {
-            margin-top: 20px;
+            margin-top: 25px;
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
         }
 
         .open-form-btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             background: #3b82f6;
             color: white;
-            padding: 12px 20px;
+            padding: 14px 24px;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
         }
 
         .open-form-btn:hover {
-            background: #2563eb;
+            background: #f97316;
         }
 
         /* Footer */
         footer {
-            background: #3b82f6;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+            opacity: 0.95;
         }
 
         /* Image loading optimization for mobile */
@@ -587,8 +672,8 @@ nav ul li a[href="#contacto"]:hover {
             }
 
             .nav-content ul li a:hover {
-                background: rgba(59, 130, 246, 0.1);
-                color: #3b82f6;
+                background: rgba(249, 115, 22, 0.1);
+                color: #f97316;
             }
 
             .language-toggle {
@@ -622,7 +707,7 @@ nav ul li a[href="#contacto"]:hover {
             }
 
             section {
-                padding: 3rem 1rem;
+                padding: 4rem 1rem;
             }
         
 
@@ -633,20 +718,20 @@ nav ul li a[href="#contacto"]:hover {
             }
 
             .logo {
-                font-size: 0.9rem;
+                font-size: 0.95rem;
             }
 
             .hero-content h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             .hero-content p {
-                font-size: 1rem;
+                font-size: 1.05rem;
             }
 
             .cta-button {
-                padding: 12px 24px;
-                font-size: 0.9rem;
+                padding: 14px 28px;
+                font-size: 1rem;
             }
         }
 
@@ -703,6 +788,91 @@ nav ul li a[href="#contacto"]:hover {
 
         /* ===== FIN DEdecoraciones ===== */
 
+        /* Seccion de Testimonios */
+        .testimonials {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            width: 100%;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #f97316;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .testimonial-info h4 {
+            color: #1e293b;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-location {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-rating {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .star {
+            color: #fbbf24;
+            margin-right: 2px;
+        }
+
+        .star.empty {
+            color: #e2e8f0;
+        }
+
+        .testimonial-text {
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .testimonial-date {
+            margin-top: 1rem;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
         /* Seccion de Galeria */
         .gallery {
            background: white;
@@ -711,23 +881,23 @@ nav ul li a[href="#contacto"]:hover {
 
         .gallery-grid {
            display: grid;
-           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-           gap: 1.5rem;
-           margin-top: 2rem;
+           grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+           gap: 2rem;
+           margin-top: 3rem;
         }
 
         .gallery-item {
            position: relative;
-           overflow: hidden; /* Importante para que el brillo no se salga */
-           border-radius: 10px;
-           height: 250px;
-           box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-           border: 3px solid #fef2f2;
+           overflow: hidden;
+           border-radius: 16px;
+           height: 280px;
+           box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+           border: 3px solid transparent;
            transition: all 0.3s ease;
-           background: #000;
+           background: #1e293b;
         }
 
-/* El efecto de Brillo (Flash) */
+/* El efecto de Brillo (Flash) - Profesional y neutro */
 .gallery-item::before {
     content: "";
     position: absolute;
@@ -736,10 +906,10 @@ nav ul li a[href="#contacto"]:hover {
     width: 50%;
     height: 100%;
     background: linear-gradient(
-        to right, 
-        rgba(255,255,255,0) 0%, 
-        rgba(255,255,255,0.6) 50%, 
-        rgba(255,215,0,0.3) 100% /* Toque dorado navideño */
+        to right,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.7) 50%,
+        rgba(255,255,255,0.4) 100%
     );
     transform: skewX(-25deg);
     transition: none;
@@ -754,8 +924,8 @@ nav ul li a[href="#contacto"]:hover {
 
 .gallery-item:hover {
     transform: translateY(-5px);
-    border-color: #3b82f6;
-    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+    border-color: #f97316;
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.25);
 }
 
 .gallery-item img {
@@ -810,6 +980,7 @@ nav ul li a[href="#contacto"]:hover {
                 <ul>
                     <li><a href="#inicio" data-es="Inicio" data-en="Home" onclick="closeMenu()">Home</a></li>
                     <li><a href="#servicios" data-es="Servicios" data-en="Services" onclick="closeMenu()">Services</a></li>
+                    <li><a href="#testimonios" data-es="Testimonios" data-en="Testimonials" onclick="closeMenu()">Testimonials</a></li>
                     <li><a href="#galeria" data-es="Galería" data-en="Gallery" onclick="closeMenu()">Gallery</a></li>
                     <li><a href="#nosotros" data-es="Nosotros" data-en="About Us" onclick="closeMenu()">About Us</a></li>
                     <li><a href="#contacto" data-es="Contacto" data-en="Contact" onclick="closeMenu()">Contact</a></li>
@@ -824,7 +995,7 @@ nav ul li a[href="#contacto"]:hover {
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <!-- Cleaning bubbles animation con efectos navideños -->
+        <!-- Cleaning bubbles animation -->
         <div class="cleaning-bubbles">
             <div class="bubble"></div>
             <div class="bubble"></div>
@@ -834,7 +1005,7 @@ nav ul li a[href="#contacto"]:hover {
         </div>
         
         <div class="hero-content">
-            <h1 data-es="Servicios de Limpieza Profesional" data-en="Professional Cleaning Services">Professional Cleaning Services</h1>
+            <h1 data-es="Los expertos en limpieza de confianza en Houston" data-en="Houston's Trusted Cleaning Experts">Houston's Trusted Cleaning Experts</h1>
             <p data-es="Mantenemos tu hogar y oficina impecables con la mejor calidad y confianza" data-en="We keep your home and office spotless with the best quality and trust">We keep your home and office spotless with the best quality and trust</p>
             <a href="#contacto" class="cta-button" data-es="Solicita tu Cotización" data-en="Request Your Quote">Request Your Quote</a>
         </div>
@@ -896,6 +1067,69 @@ nav ul li a[href="#contacto"]:hover {
                     <li data-es="Satisfacción 100% garantizada" data-en="100% satisfaction guaranteed">100% satisfaction guaranteed</li>
                     <li data-es="Precios competitivos" data-en="Competitive prices">Competitive prices</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials">
+        <h2 data-es="Qué Dicen Nuestros Clientes" data-en="What Our Customers Say">What Our Customers Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">MR</div>
+                    <div class="testimonial-info">
+                        <h4 data-es="Kenzie McCuistion" data-en="Kenzie McCuistion">Kenzie McCuistion</h4>
+                        <span class="testimonial-location" data-es="Houston, TX" data-en="Houston, TX">Houston, TX</span>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p class="testimonial-text" data-es="Excelente servicio! El equipo de C&L dejó mi apartamento impecable. Son puntuales, profesionales y usan productos ecológicos que son seguros para mi familia. Definitivamente los volveré a llamar." data-en="Excellent service! The C&L team left my apartment spotless. They are punctual, professional and use eco-friendly products that are safe for my family. I will definitely call them again.">"Excellent service! The C&L team left my apartment spotless. They are punctual, professional and use eco-friendly products that are safe for my family. I will definitely call them again."</p>
+                <div class="testimonial-date">December 2025</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">JC</div>
+                    <div class="testimonial-info">
+                        <h4 data-es="James Cooper" data-en="James Cooper">James Cooper</h4>
+                        <span class="testimonial-location" data-es="Harris, TX" data-en="Harris, TX">Harris, TX</span>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p class="testimonial-text" data-es="Necesitábamos limpieza profunda para nuestra oficina después de una renovación. C&L hizo un trabajo extraordinario. Cada rincón quedó perfecto. El servicio de pintura también fue impecable." data-en="We needed deep cleaning for our office after a renovation. C&L did an extraordinary job. Every corner was perfect. The painting service was also impeccable.">"We needed deep cleaning for our office after a renovation. C&L did an extraordinary job. Every corner was perfect. The painting service was also impeccable."</p>
+                <div class="testimonial-date">November 2025</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">LP</div>
+                    <div class="testimonial-info">
+                        <h4 data-es="Katherine C Howse" data-en="Katherine C Howse">Katherine C Howse</h4>
+                        <span class="testimonial-location" data-es="Harris, TX" data-en="Harris, TX">Harris, TX</span>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p class="testimonial-text" data-es="Llevo 6 meses usando sus servicios de limpieza quincenal para mi casa. Siempre llegan a tiempo y hacen un trabajo consistente. Me encanta la confiabilidad y el profesionalismo del equipo." data-en="I have been using their bi-weekly cleaning services for my home for 6 months. They always arrive on time and do consistent work. I love the reliability and professionalism of the team.">"I have been using their bi-weekly cleaning services for my home for 6 months. They always arrive on time and do consistent work. I love the reliability and professionalism of the team."</p>
+                <div class="testimonial-date">January 2026</div>
             </div>
         </div>
     </section>
