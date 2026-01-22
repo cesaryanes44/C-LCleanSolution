@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title data-en="Residential Cleaning | C&L Cleaning Solution"
+       data-es="Limpieza Residencial | C&L Cleaning Solution">
+Residential Cleaning | C&L Cleaning Solution
+</title>
+
+<link rel="icon" href="../img/Logo%20C%26L.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;background:#f8fafc;color:#334155}
+header{background:#fff;border-bottom:2px solid #3b82f6;position:sticky;top:0}
+nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:15px 20px}
+nav img{height:50px}
+.lang-btn{background:#3b82f6;color:#fff;border:none;padding:8px 16px;border-radius:20px;font-weight:600;cursor:pointer}
+.back{color:#3b82f6;text-decoration:none;font-weight:600}
+.hero{background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;padding:90px 20px;text-align:center}
+.hero h1{font-size:3rem}
+.hero p{max-width:700px;margin:15px auto 0;font-size:1.2rem}
+.container{max-width:1200px;margin:auto;padding:60px 20px}
+footer{background:#1e293b;color:#fff;text-align:center;padding:25px}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <div style="display:flex;align-items:center;gap:10px">
+    <img src="../img/Logo%20C%26L.png">
+    <strong>C & L Cleaning Solution</strong>
+  </div>
+  <div>
+    <button class="lang-btn" onclick="toggleLanguage()">ES / EN</button>
+    <a href="../index.html" class="back">⬅ Home</a>
+  </div>
+</nav>
+</header>
+
+<section class="hero">
+<h1 data-en="Deep Cleaning" data-es="Limpieza Profunda">Deep Cleaning</h1>
+<p data-en="Professional residential cleaning services for homes and apartments."
+   data-es="Servicios profesionales de limpieza residencial para casas y apartamentos."></p>
+</section>
+
+<section class="container">
+<p data-en="We focus on detailed cleaning, hygiene and customer satisfaction."
+   data-es="Nos enfocamos en limpieza detallada, higiene y satisfacción del cliente."></p>
+</section>
+
+<footer>
+<p>&copy; 2026 C&L Cleaning Solution</p>
+</footer>
+
+<script>
+let currentLang="en";
+function toggleLanguage(){
+currentLang=currentLang==="en"?"es":"en";
+document.documentElement.lang=currentLang;
+document.querySelectorAll("[data-en]").forEach(el=>el.textContent=el.dataset[currentLang]);
+}
+</script>
+
+</body>
+</html>
