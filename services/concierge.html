@@ -24,10 +24,39 @@ nav img{height:50px}
 .language-toggle:hover{background:rgba(59,130,246,0.2);border-color:rgba(59,130,246,0.5);transform:translateY(-2px)}
 .flag{font-size:1.1rem}
 .back{color:#334155;text-decoration:none;padding:10px 18px;border-radius:25px;transition:all 0.3s ease;font-weight:500;font-size:0.95rem;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.back::before{content:"🏠";font-size:1rem;margin-right:4px}
 .back:hover{background:rgba(59,130,246,0.1);color:#3b82f6;transform:translateY(-2px)}
-.hero{background:linear-gradient(135deg,rgba(59,130,246,0.9),rgba(37,99,235,0.9)),url('../img/hero-cleaning.png') no-repeat center center/cover;color:#fff;padding:120px 20px;text-align:center}
+.hero{position:relative;overflow:hidden;padding:120px 20px;text-align:center}
+.hero::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:url('image.png') no-repeat center center/cover;filter:blur(8px);transform:scale(1.1);z-index:0}
+.hero::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(59,130,246,0.85),rgba(37,99,235,0.85));z-index:1}
+.hero h1,.hero p{position:relative;z-index:2;color:#fff}
 .hero h1{font-size:3rem;margin-bottom:1rem;font-weight:700}
 .hero p{max-width:700px;margin:0 auto;font-size:1.2rem;line-height:1.7}
+.container{max-width:1200px;margin:auto;padding:80px 20px}
+footer{background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;text-align:center;padding:40px 20px}
+footer p{opacity:0.95;font-size:1rem}
+
+.gallery-section{background:#fff;padding:60px 20px}
+.gallery-section h2{text-align:center;font-size:2rem;color:#334155;margin-bottom:2rem;font-weight:600}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;max-width:1200px;margin:0 auto}
+.gallery-item{position:relative;overflow:hidden;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);aspect-ratio:4/3;background:#e2e8f0}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-item::before{content:"";position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 50%,rgba(255,255,255,0) 100%);transform:skewX(-25deg);transition:left 0.5s ease;z-index:2;pointer-events:none}
+.gallery-item:hover::before{left:125%;transition:left 0.6s ease}
+.gallery-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));padding:40px 20px 20px}
+.gallery-overlay span{color:#fff;font-size:0.9rem;font-weight:500}
+
+/* Benefits Section Styles */
+.benefits-section{background:linear-gradient(135deg,#f8fafc,#e2e8f0);padding:60px 20px}
+.benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1200px;margin:0 auto}
+.benefit-card{background:#fff;padding:30px;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease,box-shadow 0.3s ease}
+.benefit-card:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,0.12)}
+.benefit-icon{font-size:3rem;display:block;margin-bottom:15px}
+.benefit-card h3{font-size:1.2rem;color:#334155;margin:0 0 10px;font-weight:600}
+.benefit-card p{font-size:1rem;color:#64748b;line-height:1.6;margin:0}
+
+/* Container and Footer */
 .container{max-width:1200px;margin:auto;padding:80px 20px}
 footer{background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;text-align:center;padding:40px 20px}
 footer p{opacity:0.95;font-size:1rem}
@@ -40,6 +69,9 @@ footer p{opacity:0.95;font-size:1rem}
     .nav-buttons{gap:10px}
     .hero h1{font-size:2.5rem}
     .hero{padding:100px 20px}
+    .gallery-section h2{font-size:1.75rem}
+    .gallery-grid{grid-template-columns:repeat(2,1fr)}
+    .benefits-grid{grid-template-columns:repeat(2,1fr)}
 }
 
 /* Responsive para móviles (hasta 600px) */
@@ -51,10 +83,17 @@ footer p{opacity:0.95;font-size:1rem}
     .language-toggle .flag{font-size:1rem}
     .back{padding:8px 12px;font-size:0.8rem}
     .back span{display:none}
-    .back::before{content:"🏠";font-size:1rem}
     .hero h1{font-size:1.8rem;line-height:1.2}
     .hero p{font-size:1rem;line-height:1.5}
     .hero{padding:80px 15px}
+    .gallery-section{padding:40px 15px}
+    .gallery-section h2{font-size:1.5rem;margin-bottom:1.5rem}
+    .gallery-grid{grid-template-columns:1fr;gap:15px}
+    .benefits-section{padding:40px 15px}
+    .benefits-grid{grid-template-columns:1fr;gap:20px}
+    .benefit-card{padding:25px 20px}
+    .benefit-icon{font-size:2.5rem}
+    .benefit-card h3{font-size:1.1rem}
     .container{padding:50px 15px}
     footer{padding:30px 15px}
     footer p{font-size:0.9rem}
@@ -66,6 +105,7 @@ footer p{opacity:0.95;font-size:1rem}
     .back{padding:7px 10px}
     .nav-buttons{gap:6px}
     .hero h1{font-size:1.5rem}
+    .gallery-overlay span{font-size:0.8rem}
 }
 </style>
 </head>
@@ -83,7 +123,7 @@ footer p{opacity:0.95;font-size:1rem}
         <span class="flag" id="flag">🇺🇸</span>
         <span id="lang-text">EN</span>
     </div>
-    <a href="../index.html" class="back">🏠 <span data-en="Home" data-es="Inicio">Home</span></a>
+    <a href="../index.html" class="back"><span data-en="Home" data-es="Inicio">Home</span></a>
   </div>
 </nav>
 </header>
@@ -91,12 +131,65 @@ footer p{opacity:0.95;font-size:1rem}
 <section class="hero">
 <h1 data-en="Concierge Service" data-es="Servicio de Conserjería">Concierge Service</h1>
 <p data-en="Professional residential cleaning services for homes and apartments."
-   data-es="Servicios profesionales de limpieza residencial para casas y apartamentos."></p>
+   data-es="Servicios profesionales de limpieza residencial para casas y apartamentos.">Professional residential cleaning services for homes and apartments.</p>
+</section>
+
+<section class="gallery-section">
+<h2 data-en="Our Work" data-es="Nuestro Trabajo">Our Work</h2>
+<div class="gallery-grid">
+    <div class="gallery-item">
+        <img src="../img/concierge.jpg," alt="Concierge Service" data-en="Reception" data-es="Recepción">
+        <div class="gallery-overlay">
+            <span data-en="Reception" data-es="Recepción">Reception</span>
+        </div>
+    </div>
+    <div class="gallery-item">
+        <img src="../img/concierge-2.jpg" alt="Concierge Service" data-en="Building Lobby" data-es="Lobby del Edificio">
+        <div class="gallery-overlay">
+            <span data-en="Building Lobby" data-es="Lobby del Edificio">Building Lobby</span>
+        </div>
+    </div>
+    <div class="gallery-item">
+        <img src="../img/concierge-3.jpg" alt="Concierge Service" data-en="Package Management" data-es="Gestión de Paquetes">
+        <div class="gallery-overlay">
+            <span data-en="Package Management" data-es="Gestión de Paquetes">Package Management</span>
+        </div>
+    </div>
+    <div class="gallery-item">
+        <img src="../img/concierge-4.jpg" alt="Concierge Service" data-en="24/7 Service" data-es="Servicio 24/7">
+        <div class="gallery-overlay">
+            <span data-en="24/7 Service" data-es="Servicio 24/7">24/7 Service</span>
+        </div>
+    </div>
+</div>
+</section> 
+
+<section class="benefits-section">
+<div class="benefits-grid">
+    <div class="benefit-card">
+        <span class="benefit-icon">✨</span>
+        <h3 data-en="Detailed Attention" data-es="Atención Detallada">Detailed Attention</h3>
+        <p data-en="We focus on every corner and surface, ensuring no spot is overlooked. Your property will gleam with professionalism."
+           data-es="Nos enfocamos en cada rincón y superficie, asegurando que ningún lugar sea ignorado. Tu propiedad brillará con profesionalismo.">We focus on every corner and surface, ensuring no spot is overlooked. Your property will gleam with professionalism.</p>
+    </div>
+    <div class="benefit-card">
+        <span class="benefit-icon">🛡️</span>
+        <h3 data-en="Professional Security" data-es="Seguridad Profesional">Professional Security</h3>
+        <p data-en="We maintain the highest standards of safety and security for all residents and visitors in the community."
+           data-es="Mantenemos los más altos estándares de seguridad para todos los residentes y visitantes de la comunidad.">We maintain the highest standards of safety and security for all residents and visitors in the community.</p>
+    </div>
+    <div class="benefit-card">
+        <span class="benefit-icon">⭐</span>
+        <h3 data-en="Customer Satisfaction" data-es="Satisfacción del Cliente">Customer Satisfaction</h3>
+        <p data-en="Your happiness is our priority. We aren't satisfied until you love the results of our work."
+           data-es="Tu felicidad es nuestra prioridad. No estamos satisfechos hasta que ames los resultados de nuestro trabajo.">Your happiness is our priority. We aren't satisfied until you love the results of our work.</p>
+    </div>
+</div>
 </section>
 
 <section class="container">
 <p data-en="We focus on detailed cleaning, hygiene and customer satisfaction."
-   data-es="Nos enfocamos en limpieza detallada, higiene y satisfacción del cliente."></p>
+   data-es="Nos enfocamos en limpieza detallada, higiene y satisfacción del cliente.">We focus on detailed cleaning, hygiene and customer satisfaction.</p>
 </section>
 
 <footer>
